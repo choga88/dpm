@@ -1,0 +1,74 @@
+
+========= httpd-modjk.conf ==========
+
+LoadModule jk_module 
+<IfModule mod_jk.c>
+JkWorkersFile 
+JkLogFile "|/svc/ntc/web/apache/bin/rotatelogs -l /svc/ntc/web/apache/logs/mod_jk.log.%Y%m%d 86400"
+JkLogLevel info
+JkLogStampFormat "[%a %b %d %H:%M:%S %Y]"
+JkOptions +ForwardkeySize +ForwardURICompatUnparsed -ForwardDirectories
+JkRequestLogFormat "%w %V %T
+JkShmFile /svc/ntc/web/apache/logs/jk.shm
+</ifModule>
+
+
+========= workers.properties ==========
+
+worker.list=
+
+worker.front.port=
+worker.front.host=localhost
+worker.front.lbfactor=1
+worker.front.connection_pool_timeout=600
+worker.front.socket_keepalive=1
+worker.front.type=
+
+
+========= httpd-vhost.conf ==========
+
+<VirtualHost >
+    ServerAdmin webmaster@sklifeware.com
+    DocumentRoot 
+    ServerName www.sklifeware.com
+    ServerAlias www.sklifeware.com
+    ErrorLog "|/svc/ntc/web/apache/bin/rotatelogs /svc/ntc/web/apache/logs/front/lifeware_error_log.%Y%m%d 86400 +540"
+    CustomLog "|/svc/ntc/web/apache/bin/rotatelogs /svc/ntc/web/apache/logs/front/lifeware_access_log.%Y%$m%d 86400 +540" combined
+
+    JkMount /* front
+</VirtualHost>
+
+========= startFront.sh ==========
+SERVICE_NAME=
+SERVER_NAME=
+CATALINA_HOME=/svc/$SERVICE_NAME/was/tomcat
+CATALINA_BASE=/svc/$SERVICE_NAME/was/tomcat/$SERVER_NAME
+GCDIR=$CATALINA_BASE/gclogs
+GCLOG=$GCDIR/$SERVER_NAME-gc.log
+JAVA_HOME=/usr/local/jdk1.8.0_20
+JAVA_OPTS="-D$SERVER_NAME"
+JAVA_OPTS="$JAVA_OPTS -Xms -Xmx -XX:MaxPermSize=512m"
+JAVA_OPTS="$JAVA_OPTS -verbose:gc -Xloggc:$GCLOG"
+JAVA_OPTS="$JAVA_OPTS -XX:+PrintGCDetails"
+JAVA_OPTS="$JAVA_OPTS -XX:+PrintGCTimeStamps"
+JAVA_OPTS="$JAVA_OPTS -XX:+PrintHeapAtGC"
+JAVA_OPTS="$JAVA_OPTS -XX:+HeapDumpOnOutOfMemoryError"
+JAVA_OPTS="$JAVA_OPTS -XX:HeapDumpPath=$CATALINA_BASE/gclogs/$SERVER_NAME-java_pid.hprof"
+JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote -Dcom.sum.management.jmxremote.port=9098"
+JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
+JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=prod"
+CATALINA_OUT=$CATALINA_BASE/logs/$SERVER_NAME.out
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CATALINA_HOME/lib
+export CATALINA_HOME CATALINA_BASE SERVER_NAME GCDIR GCLOG JAVA_HOME JAVA_OPTS CATALINA_OUT LD_LIBRARY_PATH
+DATE=`date +%Y%m%d%H%M`
+mv $CATALINA_OUT $CATALINA_BASE/logs/backup/$SERVER_NAME.out.$DATE
+mv $GCLOG $GCDIR/backup/$SERVER_NAME-gc.log.$DATE
+
+========= stopFront.sh ==========
+
+SERVICE_NAME=
+SERVER_NAME=
+CATALINA_HOME=/svc/$SERVICE_NAME/was/tomcat
+CATALINA_BASE=/svc/$SERVICE_NAME/was/tomcat/$SERVER_NAME
+JAVA_HOME=/usr/local/jdk1.8.0_20
+export CATALINA_BASE CATALINA_HOME SERVER_NAME SERVICE_NAME JAVA_HOME

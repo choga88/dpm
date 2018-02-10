@@ -1,0 +1,164 @@
+[choga88@q-nimi-os05 bin]$ ./elasticsearch
+[2017-11-21T12:40:19,651][INFO ][o.e.n.Node               ] [] initializing ...
+[2017-11-21T12:40:19,741][INFO ][o.e.e.NodeEnvironment    ] [_bCtwRi] using [1] data paths, mounts [[/ (rootfs)]], net usable_space [2gb], net total_space [9.9gb], spins? [unknown], types [rootfs]
+[2017-11-21T12:40:19,742][INFO ][o.e.e.NodeEnvironment    ] [_bCtwRi] heap size [1.9gb], compressed ordinary object pointers [true]
+[2017-11-21T12:40:19,791][INFO ][o.e.n.Node               ] node name [_bCtwRi] derived from node ID [_bCtwRixTDqQH8VZD5bY6w]; set [node.name] to override
+[2017-11-21T12:40:19,791][INFO ][o.e.n.Node               ] version[5.6.4], pid[2481], build[8bbedf5/2017-10-31T18:55:38.105Z], OS[Linux/3.10.0-327.36.3.el7.x86_64/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64                    -Bit Server VM/1.8.0_92/25.92-b14]
+[2017-11-21T12:40:19,791][INFO ][o.e.n.Node               ] JVM arguments [-Xms2g, -Xmx2g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -X                    ss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -Djdk.io.permissionsUseCanonicalPa                    th=true, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPer                    Thread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Dlog4j.skipJansi=true, -XX:+HeapDumpOnOutOfMemoryError, -Des.path.home=/home/choga88/elasticsearch-5.6.4]
+
+
+
+curl -XPUT 'http://localhost:9200/books/book/1' -d '
+{ "title": "Romeo and Juliet", "author": "William Shakespeare", "category":"Tragedies",
+"written": "1562-12-01T20:40:00", "pages" : 125 }' -H 'Content-Type: application/json'
+
+curl -XPUT 'http://localhost:9200/books/book/2' -d '
+{ "title" : "Hamlet", "author": "William Shakespeare", "category":"Tragedies",
+"written": "1599-06-01T12:34:00", "pages" : 172 }' -H 'Content-Type: application/json'
+
+curl -XPUT 'http://localhost:9200/books/book/3' -d '
+{ "title": "The Prince and the Pauper", "author": "Mark Twain", "category":"Children book",
+"written": "1881-08-01T10:34:00", "pages" : 79}' -H 'Content-Type: application/json'
+
+
+
+curl -XGET 'http://localhost:9200/books/book/1?pretty' -H 'Content-Type: application/json'
+
+curl -XDELETE localhost:9200/books/book/1 -H 'Content-Type: application/json'
+
+curl -XDELETE localhost:9200/books -H 'Content-Type: application/json'
+
+
+
+curl -XPOST "http://localhost:9200/books/book/_bulk" -d '
+{"index":{"_id":"1"}}
+{"title":"Romeo and Juliet","author":"William Shakespeare","category":"Tragedies","written":"1562-12-01T20:40:00","pages":125}
+{"index":{"_id":"2"}}
+{"title":"Hamlet","author":"William Shakespeare","category":"Tragedies","written":"1599-06-01T12:34:00","pages":172}
+{"index":{"_id":"3"}}
+{"title":"The Prince and the Pauper","author":"Mark Twain","category":"Children book","written":"1881-08-01T10:34:00","pages":79}
+' -H 'Content-Type: application/json'
+
+curl -XGET "http://localhost:9200/books/_search?pretty=true"
+
+
+curl -XGET "http://localhost:9200/books/_search?pretty=true"
+curl -XGET "http://localhost:9200/books/_search?q=author:william&pretty=true"
+curl -XGET "http://localhost:9200/books/_search?q=william&df=author&pretty=true"
+curl -XGET "http://localhost:9200/books/_search?q=william%20AND%20romeo&pretty=true"
+
+
+
+curl -XGET "http://localhost:9200/books/_search?pretty=true" -d'
+{
+"query": {
+"match": {
+"author": "william"
+}
+}
+}' -H 'Content-Type: application/json'
+
+
+curl -XPOST "http://localhost:9200/_analyze?pretty" -d '
+{
+"tokenizer": "whitespace",
+"filter": ["lowercase", "stop", "snowball"],
+"text": [
+"The quick brown fox jumps over the lazy dog",
+"Fast jumping rabbits"
+]
+}' -H 'Content-Type: application/json'
+
+
+curl -XGET "http://localhost:9200/books/book/1/_termvectors?fields=author&pretty"
+
+
+curl -XGET "http://localhost:9200/books/_search?pretty=true" -d'
+{
+"query": {
+"match": {
+"author": "William"
+}
+}
+}' -H 'Content-Type: application/json'
+
+
+curl -XGET "http://localhost:9200/books/_search?pretty=true" -d'
+{
+"query": {
+"term": {
+"author": "William"
+}
+}
+}' -H 'Content-Type: application/json'
+
+
+curl -XGET "http://localhost:9200/books/_mappings?pretty"
+
+
+curl -XGET "http://localhost:9200/books/book/1/_termvectors?fields=author.keyword&pretty"
+
+
+curl -XGET "http://localhost:9200/books/_search?pretty=true" -d'
+{
+"query": {
+"term": {
+"author.keyword": "William Shakespeare"
+}
+}
+}' -H 'Content-Type: application/json'
+
+
+
+curl -XGET "http://localhost:9200/books/_search?pretty" -d'
+{
+"query": {
+"match_all": {}
+}, "aggs": {
+"authors": {
+"terms": {
+"field": "author.keyword"
+}
+}
+}
+}' -H 'Content-Type: application/json'
+
+
+curl -XGET "http://localhost:9200/books/_search?pretty" -d'
+{
+"query": {
+"match_all": {}
+}, "aggs": {
+"authors": {
+"terms": {
+"field": "author.keyword"
+},
+"aggs": {
+"pages_per_author": {
+"sum": { "field": "pages" }
+}
+}
+}
+}
+}' -H 'Content-Type: application/json'
+
+
+x-pack 인증이 on된 경우에 curl하는 방법 또는 config에서 인증을 disable 그래도 안되면 remove x-pack
+--------------------------------------------------------------------------------------------------
+curl --user elastic:changeme -XPUT 'localhost:9200/idx'
+{"acknowledged":true,"shards_acknowledged":true,"index":"idx"}[
+
+curl -XPUT 'http://localhost:9200/idx/book/1' -d '
+{ "title": "Romeo and Juliet", "author": "William Shakespeare", "category":"Tragedies",
+"written": "1562-12-01T20:40:00", "pages" : 125 }' -H 'Content-Type: application/json'
+---------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+

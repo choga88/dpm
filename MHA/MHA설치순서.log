@@ -1,0 +1,181 @@
+http://blog.naver.com/PostView.nhn?blogId=hanajava&logNo=220393850265&parentCategoryNo=&categoryNo=&viewDate=&isShowPopularPosts=false&from=postView
+
+https://code.google.com/p/mysql-master-ha/wiki/Downloads?tm=2 (공식싸이트)
+
+MariaDB 10.0.19 MHA 설치 최종 정리
+
+
+
+1. user
+
+1) mysql : /home/mysql
+
+    - mysqld을 시작/중지, mysql 클라이언트를 사용할 계정 
+
+2) mhauser : /home/mhauser
+
+?    - mha를 시작/중지, Master/Slave간 failover를 담당할 계정
+
+    - ssh 통신 계정
+
+?
+
+2. directory
+
+1) /mariadb/mysql <- $BASEDIR
+
+2) ?/mariadb/data   <- $DATADIR
+
+?
+
+3. IP
+
+1) node1 : 192.168.80.151? <- MASTER
+
+2) node2 : 192.168.80.152 <- SLAVE
+
+3) VIP      : ??192.168.80.155
+
+?
+
+4. 주요 설정파일
+
+1) /etc/init.d/mysqld
+
+?2) /etc/my.cnf
+
+2) /etc/mha.cnf
+
+3) /usr/bin/mha_failover
+
+?
+
+5. 주요 명령어
+
+?--방화벽 해제
+# service iptables status
+# service iptables stop
+# chkconfig iptables off
+
+
+--사용자 그룹 및 계정 생성
+# groupadd mysql
+# useradd -g mysql mysql
+# useradd -g mysql mhauser
+
+
+--rpm 설치
+# rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm <-- 32bit
+# rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm <-- 64bit
+# yum -y install perl-Config-Tiny
+# yum -y install perl-Log-Dispatch
+# yum -y install perl-Parallel-ForkManager
+# yum -y install perl-Time-HiRes
+# rpm -Uvh mha4mysql-node-0.56-0.el6.noarch.rpm
+# rpm -Uvh mha4mysql-manager-0.56-0.el6.noarch.rpm
+
+
+--mariadb 설치
+$ tar -zxvf mariadb-10.0.19-linux-x86_64.tar.gz.gz
+
+# mkdir -p /mariadb/mysql
+
+# cp my-large.cnf /etc/my.cnf
+
+# cat /etc/my.cnf
+------------------------------------
+basedir = /mariadb/mysql
+datadir = /mariadb/data
+------------------------------------
+
+
+--최초 database 생성하기
+-- $MYSQL_HOME에서 실행할 것
+# cd $MYSQL_HOME <-- /mariadb/mysql
+# ./scripts/mysql_install_db --defaults-file=/etc/my.cnf 
+
+
+--서비스 등록하기
+# cp mysql.server /etc/init.d/mysqld
+
+
+--소유권 부여
+# chown -R mysql.mysql /mariadb
+
+
+--서버간 데이터 전송을 위한 key 생성
+[mhauser@maria1 ~]$ ssh-keygen -t rsa
+[mhauser@maria1 .ssh]$ cp id_rsa.pub authorized_keys
+
+
+[mhauser@maria2 ~]$ ssh-keygen -t -rsa
+[mhauser@maria2 ~]$ cat id_rsa.pub ?
+[mhauser@maria1 .ssh]$ scp authorized_keys mhauser@maria2:/home/mhauser/.ssh
+
+
+--1번에서 2번 호출
+[mhauser@maria1 .ssh]$ ssh maria2 date
+Tue Jun 16 17:06:19 KST 2015
+
+--2번에서 1번 호출
+[mhauser@maria2 .ssh]$ ssh maria1 date
+Tue Jun 16 17:06:12 KST 2015
+
+?
+
+--mariadb 계정 생성 (1, 2번 서버 모두 생성)
+mysql> grant all privileges on *.* to root@'localhost' identified by 'root1!' with grant option;
+mysql> grant all privileges on *.* to root@'192.168.80.%' identified by 'root1!' with grant option;
+mysql> grant all privileges on *.* to mhauser@'192.168.80.%' identified by 'mhauser1!';
+mysql> grant replication slave on *.* to repl@'192.168.80.%' identified by 'repl1!';
+mysql> flush privileges;
+
+ 
+
+--권한 조회
+
+mysql> show grants for '계정명'@localhost;
+
+
+--1번서버 상태 확인
+mysql> show master status;
+mysql> show slave status\G
+
+
+--2번서버 상태 확인
+mysql> show master status;
+mysql> show slave status\G
+
+
+ 
+
+--2번서버에서 SLAVE 설정 실행
+
+mysql> stop slave;
+mysql> CHANGE MASTER TO MASTER_HOST='192.168.80.151', MASTER_PORT=3306, MASTER_USER='repl', \
+MASTER_PASSWORD='repl1!', master_log_file='mysql-bin.000003', master_log_pos=1312;
+
+--Line별 정리
+mysql> CHANGE MASTER TO \
+MASTER_HOST='192.168.80.151', \
+MASTER_PORT=3306, \
+MASTER_USER='repl', \
+MASTER_PASSWORD='repl1!', \
+master_log_file='mysql-bin.000003', \
+master_log_pos=1312;
+
+mysql> start slave;
+
+mysql> show slave status\G
+
+
+--2번서버에서 mha 실행
+[mhauser@maria2 ~]$ masterha_check_ssh --conf=/etc/mha.cnf
+[mhauser@maria2 ~]$ masterha_check_repl --conf=/etc/mha.cnf
+[mhauser@maria2 ~]$ masterha_check_status --conf=/etc/mha.cnf
+[mhauser@maria2 ~]$ nohup masterha_manager --conf=/etc/mha.cnf < /dev/null > /home/mhauser/logs/mha_d.log 2>&1 &
+
+
+--1번 서버에서 VIP 실행하기
+[mhauser@maria1 ~]$ sudo ifconfig eth0:0 192.168.80.155 up
+[mhauser@maria1 ~]$ sudo /sbin/arping -c3 -D -I eth0 -s 192.168.80.155 192.168.80.155

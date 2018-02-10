@@ -1,0 +1,40 @@
+[글러스터 서버] 
+
+yum -y install centos-release-gluster
+yum -y install glusterfs-server
+vi /etc/hosts  -> hostname 등록
+systemctl start glusterd
+mkdir -p /data/replica
+systemctl stop firewalld.service 
+gluster peer probe node2
+gluster peer status
+gluster volume create V_replica replica 2 transport tcp node1:/data/replica node2:/data/replica force
+
+[root@com1 Desktop]# gluster volume start V_replica
+volume start: V_replica: success
+
+[root@com1 Desktop]# gluster volume info
+Volume Name: V_replica
+Type: Replicate
+Volume ID: c7ed9e28-c110-40df-a852-8ba3f2bb42c2
+Status: Started
+Number of Bricks: 1 x 2 = 2
+Transport-type: tcp
+Bricks:
+Brick1: node1:/data/replica
+Brick2: node2:/data/replica
+Options Reconfigured:
+transport.address-family: inet
+performance.readdir-ahead: on
+nfs.disable: on
+
+[글러스터 클라이언트]
+mkdir /gluster
+mount -t glusterfs 192.168.17.161:V_replica /gluster
+
+[글러스터 test]
+1. 글러스터 한식을 shutdown 
+2. 클라이언트에서 파일생성 
+3. 나머지 글러스터에 파일생성 확인 
+4. shutdown 글러스터 부팅후 파일없음 확인 
+5. systemctl start glusterd 이후 파일생성 확인

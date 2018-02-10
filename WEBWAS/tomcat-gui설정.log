@@ -1,0 +1,16 @@
+Tomcat 관리자 모드 403에러
+Apache Tomcat 설치후 관리자 모드 실행 되지 않을때 문제 해결방법
+버전 : Tomcat 8
+파일 : tomcat-users.xml
+경로 : 톰캣설치디렉토리/conf
+<!-- 아래 내용 추가--> <role rolename="manager-gui"/> <user username="tomcat" password="비밀번호 작성" roles="tomcat,manager-gui"/>
+
+
+파일 : context.xml
+경로 : 톰캣설치디렉토리/webapps/manager/META-INF
+
+allow에 접속하려는 클라이언트PC의 IP주소를 추가
+<Context antiResourceLocking="false" privileged="true" > <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="192\.168\.0\.52|127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> </Context>
+
+위 3가지 수정후 서버 재시작
+[root@ui bin]# ./startup.sh

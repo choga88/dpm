@@ -1,0 +1,19 @@
+
+server {
+        listen 80;
+        server_name example3.org;
+
+        location / {
+        root /test/a;
+        index index.html index.htm;
+        autoindex on;
+        }
+}
+server  {
+        listen 80;
+        server_name example2.org;
+        location / {
+        root /test/b;
+        index index.html index.htm;
+        autoindex on;
+

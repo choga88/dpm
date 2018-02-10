@@ -1,0 +1,25 @@
+yum install openvswitch
+systemctl start openvswitch
+ovs-vsctl show
+ovs-vsctl add-br mybridge 
+ifconfig mybridge up
+ovs-vsctl add-port mybridge ens33
+ifconfig ens33 0
+dhclient mybridge
+ifconfig
+route -n
+ip tuntap add mode tap vport1
+ip tuntap add mode tap vport2
+ifconfig vport1 up
+ifconfig vrpot2 up 
+ifconfig 
+ovs-vsctl add-port mybridge vport1
+ovs-vsctl add-port mybridge vport2
+ovs-vsctl show
+ovs-appctl fdb/show mybridge 
+ovs-ofctl show mybridge
+ovs-ofctl dump-flows mybridge
+ovs-vsctl list Bridge
+ovs-vsctl list Port
+ovs-vsctl list Inteface
+-----------------------------------------------------------

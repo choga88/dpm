@@ -1,0 +1,205 @@
+[root@salt-master ~]# chage -l cho
+Last password change                                    : never
+Password expires                                        : never
+Password inactive                                       : never
+Account expires                                         : never
+Minimum number of days between password change          : 0
+Maximum number of days between password change          : 99999
+Number of days of warning before password expires       : 7
+
+표준입출력 
+0: stdin (키보드)
+1: stdout (모니터)
+2: stderr (모니터)
+
+[root@salt-master 2m6f6n68.default]# find / -perm -4000 ->setuid 설정된 파일찾기
+setuid가 설정되면 파일 소유자권한으로 실행권한 획득, 주로 실행파일들임 
+[root@salt-master 2m6f6n68.default]# find / -perm -2000 ->setgid 설정된 파일찾기
+setgid가 설정되면 디렉토리 자체의 그룹소유권으로 만들어지므로 공동소유가 됨
+
+[root@salt-master ~]# cat zombie.sh 
+#!/bin/bash
+ppid=$(ps -el | awk '$2=="R" { print $5 }')
+
+for pid in $ppid
+do
+	ps -e | grep $pid
+done
+
+
+`명령어` -> 명령어수행결과 이용
+$(명령어) -> 명령어수행결과 이용
+[root@salt-master ~]# echo `which top`
+/usr/bin/top
+[root@salt-master ~]# echo $(which top)
+/usr/bin/top
+
+echo home_`date +%Y%m%d`
+
+man 5 fstab -> man의 섹션번호를 줘서 조회
+
+findmnt(8), mount(8), swapon(8), fs(5), getmntent(3) <- ()는 섹션번호
+
+
+[root@salt-master etc]# stat passwd
+  File: `passwd'
+  Size: 2626            Blocks: 8          IO Block: 4096   일반 파일
+Device: fd00h/64768d    Inode: 22341598    Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Context: system_u:object_r:passwd_file_t:s0
+Access: 2016-06-02 19:59:18.148024992 -0400 -> 정보/내용 바뀌지 않고 접근한 시간
+Modify: 2016-05-08 01:40:15.684691719 -0400 -> 내용이 바뀐시간 (ls -l일때 보이는 시간)
+Change: 2016-05-08 01:40:15.685691772 -0400 -> 정보가 바뀐시간
+
+작은 따옴표는 문자열 그대로
+
+>> echo '$HOME'
+
+>> $HOME
+
+
+큰 따옴표는 변수가 가진 값을
+
+>> echo "$HOME"
+
+>> /home/directory
+
+
+역 따옴표는 안의 명령문을 실행한 결과를 반환
+
+>> echo `pwd`             
+
+>> echo /home/directory
+
+[root@salt-master ~]# ll /usr/bin/passwd
+-rwsr-xr-x. 1 root root 27832  6월 10  2014 /usr/bin/passwd 
+-> setuid가 설정되면 실행할때 소유자인 root의 권한으로 실행
+
+[root@salt-master tmp]# ls -ld /tmp
+drwxrwxrwt. 15 root root 4096  6월  2 21:47 /tmp
+->sticky권한이 설정되면 생성자만 삭제가 가능 
+
+
+35238503 -rw-r--r--. 2 root root    0  6월  2 21:53 aa            : 2로 하드링크개수가 올라감
+35238503 -rw-r--r--. 2 root root    0  6월  2 21:53 hlink         : 원본과 inode가 같음 
+35238514 lrwxrwxrwx. 1 root root    2  6월  2 22:09 slink -> aa   : inode가 다른 파일이 생김 
+
+[root@salt-master ~]# find /root -inum 35238503 ->inode가 같은 파일찾기
+/root/aa
+/root/hlink
+
+
+  tar -cvzf home.tar.gz  /home/cho
+  tar -cvJf home.tar.xz  /home/cho
+  tar -cvjf home.tar.bz2  /home/cho
+
+[root@salt-master home]# ll (압축타입별로 파일싸이즈가 다름 gz> bz2 > xz) 
+합계 20
+-rw-r--r--. 1 root root  760  6월  2 22:39 home.tar.bz2
+-rw-r--r--. 1 root root  781  6월  2 22:38 home.tar.gz
+-rw-r--r--. 1 root root  756  6월  2 22:38 home.tar.xz
+
+tar xvzf home.tar.gz -C /home/tech  -> 특정디렉토리에 압축풀때 -C옵션 사용
+
+PROCESS STATE CODES
+       Here are the different values that the s, stat and state output specifiers (header
+       "STAT" or "S") will display to describe the state of a process:
+
+               D    uninterruptible sleep (usually IO)
+               R    running or runnable (on run queue)
+               S    interruptible sleep (waiting for an event to complete)
+               T    stopped by job control signal
+               t    stopped by debugger during the tracing
+               W    paging (not valid since the 2.6.xx kernel)
+               X    dead (should never be seen)
+               Z    defunct ("zombie") process, terminated but not reaped by its parent
+
+[root@salt-master shm]# cat /proc/sys/kernel/pid_max ->최대 pid 개수 
+131072
+
+firewall-cmd --add-service=http --permanent    -> config에 영구적으로 적용
+firewall-cmd --reload                          -> config를 바로적용 
+firewall-cmd --remove-service=http --permanent -> 
+
+[root@salt-master network-scripts]# nmcli dev status
+DEVICE       TYPE      STATE         CONNECTION  
+virbr0       bridge    connected     virbr0      
+eno16777728  ethernet  connected     eno16777728 
+eno33554968  ethernet  connected     eno33554968 
+virbr0-nic   ethernet  disconnected  --          
+lo           loopback  unmanaged     --          
+[root@salt-master network-scripts]# nmcli con show
+NAME                UUID                                  TYPE            DEVICE      
+Wired connection 2  06d708ae-eec7-471e-912c-30f904f6d399  802-3-ethernet  --          
+Wired connection 1  b1dc95f2-cbe9-475f-b87b-6e6d1f7c7131  802-3-ethernet  --          
+eno16777728         ffdf5c5b-2abf-48ff-b292-85daedb7c685  802-3-ethernet  eno16777728 
+eno33554968         6972bab3-2a60-4992-b4f0-c527e93deaf4  802-3-ethernet  eno33554968 
+virbr0              58ebc266-e6d0-45bb-83e4-a2fc775104a1  bridge          virbr0      
+
+NFS 서버는
+yum install nfs-utils
+vi /etc/exports에 설정하고 /ppp (ro)
+[root@salt-master network-scripts]# exportfs 또는 nfs.service 재기동
+/ppp          	<world>
+
+NFS 클라이언트에서 마운트
+mount 192.168.17.134:/ppp /root/nfs
+
+SMB 서버는
+yum insatll samba, samba-common, samba-libs,samba-clinet 설치
+/etc/samba/smb.conf 파일수정
+[share]
+        comment= Public Stuff
+        path=/ppp
+        browseable=yes
+        writable=yes
+        valid users=cho -> 리눅스 계정
+
+smbpasswd -a cho  -> samba계정설정
+
+[root@salt-master Desktop]# smbclient //localhost/share -U cho
+Enter cho's password: 
+Domain=[MYGROUP] OS=[Windows 6.1] Server=[Samba 4.2.10]
+smb: \> ls
+  .                                   D        0  Wed Jun 15 21:48:20 2016
+  ..                                 DR        0  Wed Jun 15 22:35:07 2016
+  abc                                 N        0  Wed Jun 15 21:48:20 2016
+
+		8869888 blocks of size 1024. 1090784 blocks available
+
+fiwewalld, setlinux 허용설정
+
+윈도우탐색기 
+\\192.168.17.134 검색
+
+쓰기허용을 할려면 
+공유디렉토리에 chmod 1777 /ppp 설정후 가능
+
+아파치 설정
+가. user의 home 디렉토리 접근설정
+/etc/httpd/conf.d/userdir.conf 
+ UserDir public_html
+계정의 디렉토리 권한을 chmod 705 cho로 설정하고 mkdir /home/cho/public_html 디렉토리 생성 
+http://localhost/~cho 로접근 
+나. ssl 기능사용
+/etc/httpd/conf.d/ssl.conf
+ DocumentRoot "/var/www/html_ssl"를 별도로 지정
+브라우저의 인증서-> 환경설정->고급->인증서->server탭에서 삭제후 
+https://localhost/로 접근하면 
+
+[skt@salt-master pub]$ ulimit -c unlimited
+[skt@salt-master pub]$ ulimit -a
+core file size          (blocks, -c) unlimited
+
+[skt@salt-master pub]$ sleep 100
+^\Quit (core dumped)   -> cltrl+역슬래쉬 core파일생성
+[skt@salt-master pub]$ 
+[skt@salt-master pub]$ kill -l
+3) SIGQUIT
+[skt@salt-master pub]$ ll
+total 140
+-rw-------  1 skt  root 385024 Jun 16 02:45 core.10412
+[skt@salt-master pub]$ file core.10412 
+core.10412: ELF 64-bit LSB core file x86-64, version 1 (SYSV), SVR4-style, from 'sleep 100'
+
+

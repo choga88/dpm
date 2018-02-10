@@ -1,0 +1,12 @@
+ㅇ 동영상: The future of Linux Containers
+
+1. 이론자료
+2. 실습자료
+3.주변지식
+ㅇThe Linux Bridge
+ㅇNetwork Namespaces
+ㅇVirtual Ethernet Devices(veth)
+ㅇiptables
+ㅇOverlay VXLAN(VTEP)
+
+https://www.docker.com/products/docker-toolbox#/tutorials

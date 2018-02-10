@@ -1,0 +1,21 @@
+S'1 line.\n'
+p0
+.S'2 line.\n'
+p0
+.S'3 line.\n'
+p0
+.S'4 line.\n'
+p0
+.S'5 line.\n'
+p0
+.S'6 line.\n'
+p0
+.S'7 line.\n'
+p0
+.S'8 line.\n'
+p0
+.S'9 line.\n'
+p0
+.S'10 line.\n'
+p0
+.

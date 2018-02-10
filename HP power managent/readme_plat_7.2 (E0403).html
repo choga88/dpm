@@ -1,0 +1,1275 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>IMC - Intelligent Management Center readme</title>
+  <style>
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+table > thead > tr {
+  font-size: 0.9em;
+  background-color: #f2f2f2;
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+table > thead > tr > th {
+  border: 1px solid #ddd;
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+  padding: 8px;
+  line-height: 1.42857143;
+  display: table-cell;
+}
+table > tbody > tr > td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  display: table-cell;
+}
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+  </style>
+</head>
+<body>
+<p align="center"><font color="#006699" face="Arial" size="6"><b>IMC</b></font><br>
+<font color="#006699" face="Arial" size="4"><b>Intelligent Management Center
+PLAT 7.2 (E0403)</b></font><br>
+<font color="#006699" face="Arial" size="1"><i>&copy Copyright 2015 Hewlett Packard Enterprise Development LP</i></font> </p>
+<hr>
+<h2><a name="toc">Table of Contents</a></h2>
+<ol>
+  <li><a href="#featuresUpdate">What's New in this Release</a></li>
+  <li><a href="#bugFixes">Problems Fixed in this Release</a></li>
+  <li><a href="#IMC-Software-Distribution-Contents">IMC Software Distribution Contents</a></li>
+  <li><a href="#installReqs">Installation Prerequisites</a></li>
+  <li><a href="#clientReqs">Client Prerequisites</a></li>
+  <li><a href="#upgradeInstallation">Installing and Upgrading IMC</a></li>
+  <li><a href="#uninstall">Removing IMC</a></li>
+  <li><a href="#rundma">Running the Deployment Monitoring Agent</a></li>
+  <li><a href="#runserver">Starting IMC</a></li>
+  <li><a href="#usingimc">Logging in to IMC through a Web Browser</a></li>
+  <li><a href="#monitoring">Monitoring the Server</a></li>
+  <li><a href="#distributed">Distributed Deployment</a></li>
+  <li><a href="#platform">Platform Specific Issues</a></li>
+  <li><a href="#ports">TCP Port Usage</a></li>
+  <li><a href="#MemoryAllocation">Memory Allocation</a></li>
+  <li><a href="#knownProblems">Known Problems</a></li>
+</ol>
+<hr>
+<h2><a name="featuresUpdate">What's New in this Release</a></h2>
+<p>IMC PLAT 7.2 (E0403) can be installed directly, or you can upgrade from only IMC PLAT 7.1 (E0302), and IMC PLAT 7.1 (E0303) and later versions.</p>
+<p>To upgrade from versions prior to v 7.1, upgrade both the IMC Platform and all the deployed service components through each released version.
+  The upgrade path is V3.3 &gt;&gt; V5.0 &gt;&gt; V5.1 &gt;&gt; V5.2 &gt;&gt; V7.0 &gt;&gt; V7.1&gt;&gt; V7.2. Before you upgrade the IMC Platform, download upgrade packages for all deployed service
+  components from HP's website, and before you install them pay special attention to the section "Platform Compatibility" in their readme. 
+  If an upgrade package is not available for a service component, HP recommends not upgrading the IMC Platform,
+  or you can remove the service component before upgrading the IMC Platform. When the service component is removed, its data is lost. It is not
+  possible to import the database taken from a previous version into  V7.2. The following lists all features released after IMC PLAT 7.1 (E0302).</p>
+<h3>Features released in IMC PLAT 7.2 (E0403)</h3>
+<ul>
+	<li>Supports OneView integration.</li>
+	<li>Supports VXLAN.</li>
+	<li>Custom views support upper-level views by using the API POST plat/res/view/custom</li>
+  <li>Supports the following new operating system: RHEL 7.x.</li>
+  <li>Supports Oracle 12c Release 1</li>
+  <li>Adding the Perspective QSP template.</li>
+  <li>Adding system integration with AirWave</li>
+  <li>Integration with Aruba ClearPass and Aruba AirWave trap definitions in trap management of the alarm module.</li>
+  <li>Reporting alarms to upper-level IMC administrators for processing when the grace days for alarm acknowledgement expires on the Alarm Notification page of the alarm module.</li>
+  <li>The tools directory provides iMC-MIB-Download_Windows.zip or iMC-MIB-Download_Linux.zip to import IMC trap definitions to MIB files</li>
+  <li>Set the autocfg_exec_mode parameter to 1 in the file /server/conf/qvdm.conf of the IMC installation path, and then restart the imciccdm program to support serial execution of auto deployment plans.</li>
+  <li>Backup function for HP PROCURE 2520 device configurations on the Service > Configuration Center page.</li>
+  <li>Using the device model as the display name in the topology.</li>
+  <li>Custom report feature.</li>
+  <li>Custom view eAPI and upper-level views.</li>
+  <li>Starting and stopping a single process by using command lines in Linux.</li>
+  <li>Access to interface lists of interface views by clicking icons on the Interface View TopN widget on the home page.</li> 
+  <li>Displays route relationships among devices on a route topology based on device routing tables.</li>
+  <li>In  Intelligent Policy Center, Action Management supports the Restart VM operation. </li>
+  <li>On the device query page, the advanced query provides the Device Alarms  field.</li>
+  <li>On the all alarms page, the advanced query provides the logical  combination of NO.</li>
+  <li>Supports custom interfaces for third-party mails servers.</li>
+  <li>The performance view provides the Modify the Upper-Level Folder feature.</li>
+  <li>The configuration template library supports access control by operator  group.</li>
+  <li>Configuration template deployment supports exporting parameters from CSV  files.</li>
+  <li>The VRM component supports detecting unmanaged hosts under a managed vManager. </li>
+  <li>Device and interface (link) maintenance tagging.</li>
+  <li>Displaying or hiding interface aliases in interface-related alarms.</li>
+  <li>Sending alarm notification in long SMS messages.</li>
+  <li>A Test button is provided to test the SMS modem.</li>
+  <li>Scenario-based trap-to-alarm rule configuration.</li>
+  <li>Displaying the STP root bridge in the MSTP topology.</li>
+  <li>Topology diagnosis.</li>
+  <li>Managing Extreme x460 series devices by using Resource Management.</li>
+  <li>The default setting for DismanPing is FALSE in the global configuration.</li>
+  <li>Configuring a rule to automatically add interfaces of new devices to an interface view.</li>
+  <li>Email alarm notifications provide a link for users to confirm the alarms.</li>
+  <li>A REST API for obtaining trap definitions is provided.</li>
+</ul>
+<h3>Enhancements released in IMC PLAT 7.1 (E0303P16)</h3>
+<ul>
+  <li>None</li>
+</ul>
+<h3>Features released in IMC PLAT 7.1 (E0303L15)</h3>
+<ul>
+  <li>VMware IOPS storage read and write performance indexes  were added to VRM monitoring.</li>
+  <li>ACL management supports devices running Comware V7.1  B58 and later versions.</li>
+  <li>On the device query page, the advanced query provides  the Device Alarms field.</li>
+  <li>On the all alarms page, the advanced query provides  the logical combination of NO.</li>
+  <li>Supports custom interfaces for third-party mails  servers.</li>
+  <li>The performance view provides the Modify the  Upper-Level Folder feature.</li>
+  <li>The configuration template library supports access  control by operator group.</li>
+  <li>Configuration template deployment supports exporting  parameters from CSV files.</li>
+  <li>Support auto deployment for CentOS-6.6-X86_64 and CentOS-7-x86_64  operating systems.</li>
+  <li>IP/MAC learning results are added in batches to IP/MAC  and terminal MAC bindings. </li>
+</ul>
+<h3>Enhancements released in IMC PLAT 7.1 (E0303P13)</h3>
+<ul>
+	<li>The 3D room provides basic lighting elements such as point lighting and tube lighting.</li>
+	<li>Elements in the 3D room support automatic alignment.</li>
+	<li>In the 3D room, the Save buttons for rooms and racks provide Successfully Saved messages.</li>
+	<li>The 3D room supports the query function.</li>
+	<li>Adding the text label element for the display tiling. The text label element supports entering single-line text in the text label or text field.</li>
+	<li>Supports EAPI interfaces used for querying iMC license information.</li>
+	<li>Supports EAPI interfaces used for querying device additional information.</li>
+	<li>The monitoring settings page provides the instance view switch link that allows users to access the instance view page.</li>
+	<li>The Alarm > Trap Definition > Device Severity page provides the link that allows users to access the device trap level rule page. When custom trap level rules have different devices but have the same trap, same parameters, and same level, these custom trap level rules are displayed in a rule.</li>
+	<li>The advanced query on the Alarm > All Alarms page supports multiple query criteria, and supports AND and OR relationships between the query criteria.</li>
+	<li>The device panels of S10500 and S12500 switches support power supplies and fans with colored borders. The border color of a power supply or fan indicates the current status of the power supply or fan. The color of green indicates that the power supply or fan is working correctly. The color of red indicates that the power supply or fan is faulty. The color of grey (no border) indicates that getting the status of the power supply of fan failed (unknown status).</li>
+	<li>When the status of a device alarm or link alarm becomes red, the device icon or the link blinks.</li>
+	<li>On the performance instance threshold page, the value ranges of start and end values are optimized.</li>
+	<li>For a single index in a single performance, the default maximum number of instances is increased to 150.</li>
+	<li>On the SMSC settings page, serial number registration for the SMS Center sending method supports entering keys.</li>
+	<li>LiveUpdate URL changes to https://h10145.www1.hpe.com/web/services/pcm3/PcmWebSvc.asmx.</li>
+</ul>
+
+<h3>Features released in IMC PLAT 7.1 (E0303H12)</h3>
+<ul>
+	<li>None</li>
+</ul>  
+
+<h3>Features released in IMC PLAT 7.1 (E0303L11)</h3>
+<ul>
+	<li>Modifying a single device location or modifying device locations in batches.
+	<li>The <b>Alarm > Trap Definition > Modify Trap</b> page supports modifying the level of network management alarms.</li>
+	<li>The <b>Home > Alarm Panel > Alarm Sound Setting</b> page supports customizing alarm sounds per operator.</li>
+	<li>The <b>Resource > Performance Management > Performance</b> Option page provides the TopN Index tab that allows users to modify TopN indexes.</li>
+	<li>The Display Option tab on the <b>Resource > Performance Management > Performance Option</b> page supports configuring the colors and roughness of curves of the performance trend chart.</li>
+	<li>The device and interface details pages provide the <b>Modify Display Index</b> link that allows users to customize display indexes.</li>
+	<li>The <b>Resource > Performance Management > Monitoring Settings</b> page provides the Cancel button for each monitor index for each device. The button enables users to cancel all monitor instances for a monitor index at one time.</li>
+	<li>The <b>At a Glance</b> page supports sorting the interface traffic list by the Monitored Objects field.</li>
+	<li>Supporting notifying administrators by mails before license expiration.</li>
+	<li>The <b>Service > Auto Deployment Plan</b> page supporting adding device quickly by the scanner gun for auto deployment.</li>
+	<li>DBMan supports backing-up and restoring multiple database of one IMC component.</li>
+
+</ul>  
+
+  <h3>Enhancements released in IMC PLAT 7.1 (E0303P10)</h3>
+<ul>
+	<li>The <b>Resource > Service Monitoring</b> page supports Web addresses that begin with https:// for Internet service monitor adding.</li>
+	<li>The <b>Alarm > Trap Management > Trap to Alarm</b> page supports configuring Trap to Alarm rules in batches according to scenarios.</li>
+	<li>The <b>System > System Configuration > SMSC Settings</b> page supports viewing the sending records of SMS messages.</li>
+        <li>The <b>System > System Configuration > Quick Service Process</b> page provides the quick service process feature that integrates service configuration procedures into templates. You can add the quick service process widget to the home page.</li>
+        <li>The <b>System > Group Management > Device Group</b> page supports adding subgroups.</li>
+        <li>The <b>Service > Policy Control Center</b> page supports the policy management feature.</li>
+        <li>The <b>Service > Configuration Center > Auto Deployment Plan</b> page provides the basic and advanced query features.</li>
+</ul>  
+
+  <h3>Features released in IMC PLAT 7.1 (E0303L08)</h3>
+<ul>
+	<li>Adding the Last Change column to the interface list on the device details page in the device view.</li>
+	<li>Modifying the template access rights for adding or modifying of SNMP, Telnet, and SSH templates in the resource management module.</li>
+	<li>The <b>System > Operator Management > Data Privilege Configure</b> page provides global access right configuration for SNMP, Telnet, and SSH templates. This feature is unavailable when the IMC platform cooperates with RSM.</li>
+	<li>The <b>System > Operator Management > Authentication Server</b> configuration enables IMC to use LDAP authentication when no operator exists in the system.</li>
+	<li>The <b>Alarm > Alarm Browse > Real-Time Alarms</b> page provides the Show Root Alarms option  that filters out common alarms and displays only the root alarms.</li>
+	<li>Data collection of performance indexes for Alcate/Allied-Telesis devices.</li>
+</ul>  
+  <h3>Features released in IMC PLAT 7.1 (E0303L07)</h3>
+<ul>
+	<li>Providing the Periodic Monitoring page in the Performance Management module. Monitoring data during specified work time is displayed for devices in different custom views.</li>
+	<li>Clicking MIB Upload on the Trap Definition page in the Alarm Management module to import trap definitions through a MIB file. The MIB file can be in ZIP format.</li>
+	<li>Resizing columns on the Real-Time Alarms page in the Alarm Management module.</li>
+	<li>Installing Deployment Monitoring Agent on the database server and performing DBMan operations.</li>
+	<li>Adding the Release Date column in the <b>Service > Software Library</b> page.</li>
+	<li>Sending the configuration report for an auto deployment plan to a mailbox on the Add Auto Deployment Plan page in the Service Management module.</li>
+	<li>Adding the isSTPEnable and isSSHEnable predefined policies in the compliance policy list in the Service Management module.</li>
+	<li>Adding the MAC vendor management function on the terminal access page in the Resource Management module.</li>
+	<li>Traps are allowed to self recover when traps are defined in IMC. However, traps for link states are still not allowed to self recover. Traps for link states has the follow types: 
+ 	    <br>Link Down (1.3.6.1.6.3.1.1.5.2.0) or Link UP (1.3.6.1.6.3.1.1.5.3.0)
+ 	    <br>Link State Down (1.3.6.1.4.1.2011.10.4.1.1.2.6.8) or Link State UP (1.3.6.1.4.1.2011.10.4.1.1.2.6.9)
+ 	    <br>Link State Down (1.3.6.1.4.1.25506.4.1.1.2.6.8) or Link State UP (1.3.6.1.4.1.25506.4.1.1.2.6.9)
+ 	</li>
+ 	<li>Seting the log file size. Use either of the following methods to set the log file size:
+ 	    <br>Method 1
+ 	    <br><ul><li>Enter the \server\conf directory of the IMC installation path.</li>
+ 	    <li>Open the qvdm.conf file.</li>
+ 	    <li>Set the LogFileSize field. <br>The maximum value is 2047 MB and the minimum value is 1 MB.</li></ul>
+ 	    Method 2
+ 	    <br><ul><li>Enter the \server\bin directory of the IMC installation path.</li>
+ 	    <li>Set the environment variable. <br>start_env.bat</li>
+ 	    <li>Set the log size for a process. <br>logset -p1 -s50</li></ul>
+            This method sets the log file size only for the specified process. You do not need to restart IMC.
+ 	</li>
+</ul>  
+  <h3>Enhancements released in IMC PLAT 7.1 (E0303P06)</h3>
+<ul>
+	<li>The asset report that meets the requirements of HP post-sale service contracts is added, and the device asset report (Concise) is added. </li>
+	<li>On the <b>Resource &gt; Performance Management &gt; Service Monitoring &gt; Add Service Monitor</b> page, the maximum length of an FQDN for a DNS service monitor is 255</li>
+	<li>Supports deleting security MAC-port bindings for devices running Comware V5.</li>
+</ul>
+  <h3>Features released in IMC PLAT 7.1 (E0303H03)</h3>
+<ul>
+	<li>None</li>
+</ul>  
+  <h3>Features released in IMC PLAT 7.1 (E0303L02)</h3>
+<ul>
+	<li>Provides the Modify ACL button on the View ACL page for ACL devices</li>
+	<li>Provides new schemes and alarm widgets for the dashboard.</li>
+	<li>Provides the Star theme.</li>
+</ul>
+  <h3>Features released in IMC PLAT 7.1 (E0303L01)</h3>
+<ul>
+	  <li>None</li>
+</ul>
+<h3>Features released in IMC PLAT 7.1 (E0303)</h3>
+<ul>
+	<li>None</li>
+</ul>	
+<h3>Features released in IMC PLAT 7.1 (E0302)</h3>
+<ul>
+  <li>Baseline software audit supports ComwareV7 devices using the IPE software package.</li>
+  <li>Automatically deletes devices that are unreachable for a given period of time from IMC.</li>
+  <li>Supports centrally performing compliance check for devices across multiple RSMs.</li>
+  <li>Modifies the information display mode of the error information for report script executions on the login page.</li>
+  <li>Cancels the limit on the number of exported alarms. Supports creating more tabs in the exported excel file, with each tab containing up to 5000 rows.</li>
+  <li>Limits the URL length to 128 characters in Service Monitoring of Performance Management.</li>
+  <li>Supports the backup and restore function for Juniper SRX650 devices in ICC.</li>
+  <li>Enhances the IP address management function by displaying IP address segment statistics and displaying idle IPs in each IP address segment.</li>
+  <li>Supports sorting and searching capabilities for the lists on some network element information pages, for example, the IP route pages.</li>
+  <li>Displays the custom view list in a tree, and sorts the custom views by name by default.</li>
+  <li>Reads the private MIB of an MSM device to get and show its sysuptime.</li>
+  <li>Supports using SCP to deploy configurations to Cisco 2960 /3750 switches.</li>
+  <li>Supports writing the operation logs to the imcforeground.log file. Users can disable/enable this feature in IMC system settings. This feature is enabled by default.</li>
+  <li>Supports firmware upgrade for stacked Cisco 2960s devices.</li>
+  <li>Allows an operator to use the full name (which can contain characters other than ASCII characters) to log in to IMC and shows the full name in the top right corner of IMC page after the login succeeds.</li>
+  <li>Supports copying customized homepages and my favorites. </li>
+  <li>Supports importing a file to batch modify device labels on the <b>Resource &gt; Import/Export Device</b> page.</li>
+  <li>Supports showing power supply and fan status in device panel view for devices that can provide related info in the MIBs.</li>
+  <li>Supports showing device label (alias name) and IP info in the device panel view for 10500 and 3800 devices.</li>
+  <li>Supports using SCP to back up configuration files for Cisco 7606 devices.</li>
+  <li>Improves the topology link labels as follows: sets different background colors for different link labels; keeps the link label direction the same as the link direction; supports displaying abbreviated interface names for interface names in link labels.</li>
+  <li>Adds the sysLocation as an optional parameter for customizing the alarm forwarding format.</li>
+  <li>Displays the device type names on the Y-Axis of the Device View widget on the IMC homepage.</li>
+  <li>Automatically sets the heap size for JServer according to the total physical memory size of the IMC server during the IMC installation process.</li>
+  <li>Supports manually drawing curve links in the topology.</li>
+  <li>Supports disabling/enabling MSTP info gathering for L2 topologies.</li>
+  <li>Allows using hyphens (-), underscores (_), pluses (+) and spaces ( ) in VLAN descriptions.</li>
+  <li>Shows links between Cisco switches correctly when the interfaces are configured as channel trunk.</li>
+  <li>Supports HTML5 dashboards.</li>
+  <li>ICC uses only CLI rather than template to perform compliance checks. It will not be affected by TFTP or SFTP.</li>
+  <li>Supports reading data in timeticket format from the MIBs.</li>
+  <li>Uses CLI to deploy Quickfix for compliance check, and supports Quickfix for HP devices.</li>
+  <li>Shows the hard disk sizes of the virtual machines on the Web interfaces.</li>
+  <li>Shows the local storage information of the virtual machines on the Web interfaces.</li>
+  <li>Shows the link between the VM and the storage when the virtual host is open in the virtual network topology.</li>
+  <li>Provides new dashboard widgets to show the VM performance.</li>
+  <li>Performs the privilege check for switches connected to VMs before VM migration.</li>
+  <li>Supports forwarding syslogs and traps to ArcSight by using the filter tools.</li>
+  <li>Optimizes ICC prompts.</li>
+  <li>Implements 3D datacenters by using WebGL 3D.</li>
+  <li>Adds a new theme named Sky Blue as the default theme.</li>
+  <li>Supports SQL Server 2014.</li>
+  <li>Combines HA with DBMAN to provide HA deployments for IMC and databases.</li>
+  <li>When a viewer with only the permission to the custom topology logs in to IMC and views the topology, the topology does not provide the right-click shortcut menus, tool bar, and tips.</li>
+  <li>Adds the function of collaborating with Microsoft SCOM and forwarding alarms in IMC to SCOM.</li>
+  <li>Supports forwarding SMS through email.</li>
+  <li>The Resource > Performance Management > Monitoring Settings page displays monitor devices, monitor indexes, and monitor instance in a tree structure. The Switch to Instance List link is deleted.</li>
+</ul>
+<h3>[ <a href="#toc">Table of Contents</a> ]</h3>
+<hr>
+
+<h2><a name="bugFixes">Problems Fixed in this Release</a></h2>
+<p>IMC PLAT 7.2 (E0403) fixes the following problems.including all bugs fixed after IMC PLAT 7.1 (E0302).</p>
+<h3>Resolved Problems in IMC PLAT 7.2 (E0403)</h3>
+<ol>
+  <li>This symptom occurs when a user views the dashboard that contains the  per-level alarm trend chart.The dashboard displays data incorrectly.</li>
+  <li>This symptom occurs when a user adds the per-level alarm trend chart  (the alarm class is all alarms) and the per-class statistics trend chart (the  alarm class is configuration alarms) to the dashboard and monitors alarms for  some time.Curves of the per-level alarm trend chart fall at irregular intervals.</li>
+  <li>This symptom occurs when a user selects a device on the Applet network  topology, right-clicks the device, and then selects Open Device Panel from the  shortcut menu.A page error occurs when a user accesses the device panel.</li>
+  <li>This symptom occurs when Enable Mail Notification is selected in license  expiration mail notification settings on the system settings page.The mail content is incorrect and the mail format requires optimization.</li>
+  <li>This symptom occurs when a user accesses the system settings page with  the alarm module not installed.Accessing the system settings page takes a long time.</li>
+  <li>This symptom occurs when a user clicks Add Link on the link management  page for a custom topology.An error for the Add Link page occurs.</li>
+  <li>This symptom occurs when a maintainer logs in to iMC and double-clicks a  cloud in the converged topology.A maintainer fails to open the topology for a cloud.</li>
+  <li>This symptom occurs when a user clicks the Add Link icon on the  converged topology, or right-clicks the converged topology and selects Add Link  from the shortcut menu.An error for the Link Management page occurs.</li>
+  <li>This symptom occurs when a user clicks Save in the toolbar on the  converged topology.The note and the background area cannot be saved.</li>
+  <li>This symptom occurs when a uses accesses a REST API.The associated model schema for a REST API does not exist.</li>
+  <li>This symptom occurs after the WSM component is installed.The REST APIs of license management are unavailable and the response  codes are 404. </li>
+  <li>This symptom occurs when a maintainer who has no management rights to  self-service accounts modifies a user.A page error occurs when a maintainer attempts to modify a user.</li>
+  <li>This symptom occurs when the SSA version is upgraded from iMC PLAT 7.1  (E0303) to iMC PLAT 7.1 (E0303P13).A page error occurs when a user configures server power supply trap  information.</li>
+  <li>This symptom occurs when iMC had ever been started before it was  upgraded to iMC PLAT 7.1 (E0303P13).The Device Asset Report(Concise) cannot be obtained after iMC was  upgraded to iMC PLAT 7.1 (E0303P13).</li>
+  <li>This symptom occurs when a user exports the Device Asset Report(Concise).The summary report at the end of the Device Asset Report(Concise) is  displayed incorrectly after the Device Asset Report(Concise) is exported to an  EXCEL file.</li>
+  <li>This symptom occurs when the performance management module is installed  and monitoring objects are added in iMC that runs in Linux and uses an Oracle  database.The performance background process restarts sometimes.</li>
+  <li>This symptom occurs when a user deploys the alarm management module of  the iMC PLAT 7.1 (E0303P13) version, undeploys and removes the module, and then  deploys the module again.An error occurs during the deployment of the alarm management module of the  iMC PLAT 7.1 (E0303P13) version.</li>
+  <li>This symptom occurs when the sending alarm SMS message feature is  enabled in iMC that runs in Linux.Alarm SMS messages cannot be received.</li>
+  <li>iMC runs on Linux and uses the Oracle database. An  error page appears after an operator clicks Refresh on the server details page  that contains an empty server name field.</li>
+  <li>The disk space of the iMC server is full after DBMan  automatic backup runs for a long period of time in distributed, standalone, or  primary/backup iMC deployment.</li>
+  <li>An operator disables the route topology feature and  then synchronizes devices. The custom topology still contains links added by  the route topology feature.</li>
+  <li>The topology page displays an incorrect link state after an operator performs the following procedure:<br>
+    a.	On the topology page, changes the link interface for a device whose state has changed from reachable to unreachable. <br>
+  b.	Views the link status.</li>
+  <li>The SNMP parameters test displays a Failure message after an operator performs the following procedure:<br>
+    a.	Clicks MIB Management in the Action section of a device's Device Details page, and then opens the SNMP parameter configuration page. <br>
+    b.	Configures the read-only community string in the Read-Only Community String field, and leaves the Read-Write Community String field empty. <br>
+  c.	Clicks Test.</li>
+  <li>An operator configures an SMS messaging alarm  notification rule with a plus sign (+) preceding the country code. The  cellphone cannot receive alarm notification SMS messages.</li>
+  <li>The following error message appears after an operator deletes a trap definition from the trap definition list:<br>
+  Operation failed with error code 4002. Please contact your administrator.</li>
+  <li>An error page appears after an operator configures the  alarm reporting feature for the first time on the hierarchical iMC alarming configuration  page.</li>
+  <li>When an operator modifies index settings on the Add Monitor page and attempts to select the Global Index Settings option, a page error appears.</li>
+  <li>Monitor data loss occurs on the realtime performance monitoring page after a performance management module upgrade.</li>
+  <li>SMS messages cannot be sent by using the Convert Mail into SMS sending method after the reboot of IMC.</li>
+  <li>When a single mail notification rule on the Alarm Notification page contains more than one recipient address, sending of alarm notification mails fails.</li>
+  <li>A page error might occur when an operator clicks the ACL Configuration icon for a device on the ACL device list page of the ACL management module.</li>
+  <li>If a .csv file contains SNMPv3 parameters, it cannot be imported to auto deployment plans.</li>
+  <li>When the report module is deployed after the IMC platform with a remote database is upgraded to IMC PLAT 7.2 (E0403), the following message appears: Invalid object name 'TBL_RPTVIEWER_INSTALL_UPDATE'.</li>
+  <li>Database files backed up by running DBMan commands cannot be restored through DBMan.</li>
+  <li>After a device that includes aggregation interfaces is added to IMC, the VLAN device list does not display the device.</li>
+  <li>When the log level of the alarm module is set to Debug, CoreDump sometimes occurs in the background process of the alarm module.</li>
+  <li> If an online endpoint uses an IP address different than the endpoint IP/MAC address binding in the terminal access module, IMC generates IP/MAC address inconsistency alarms for the endpoint multiple times.</li>
+  <li>CVE-2015-5567, CVE-2015-5568, CVE-2015-5570, CVE-2015-5573, CVE-2015-5574, CVE-2015-5575, CVE-2015-5577, CVE-2015-5578, CVE-2015-5579, CVE-2015-5580, CVE-2015-5581, CVE-2015-5582, CVE-2015-5584, CVE-2015-5587, CVE-2015-5588, CVE-2015-6676, CVE-2015-6677, CVE-2015-6678, CVE-2015-6682, CVE-2015-5572, CVE-2015-5576, CVE-2015-6679, CVE-2015-5571.</li>
+  <li>All configuration template files in iCC will be cleared if you update an early version to iMC PLAT 7.1 (E0303P16) or later.</li>
+</ol>
+<h3>Resolved Problems in IMC PLAT 7.1 (E0303P16)</h3>
+<ol>
+  <li>This symptom might occur  during server synchronization. The imccimdm process  terminates and the system produces a core dump file.</li>
+  <li>The query result is empty by specifying the start and  end time for the RESTful API Query Single-Index TopN Data.</li>
+  <li>This symptom occurs when the IPC module executes  configuration file deployment that contains only the action parameter settings. Configuration file deployment failed and the system  displays the message &quot;The deployed devices do not exist.&quot;</li>
+  <li>This symptom occurs when an operator modifies a log  level in the log configuration module. The prompt message for a log level modification  operation is incorrect.</li>
+  <li>This symptom occurs after the operator adds a  user-defined device vendor. The system cannot display the device definition page  when an operator returns from the device vendor page.</li>
+  <li>CVE-2015-3113. Heap-based buffer overflow in Adobe Flash Player  allows arbitrary code execution via unspecified vectors. This issue exists in  Adobe Flash Player embedded in iMC.</li>
+  <li>CVE-2015-5122. Use-after-free vulnerability exists in the  DisplayObject class in the ActionScript 3 implementation in Adobe Flash Player  of Chrome installations. It allows arbitrary code execution or launching of a  DoS attack (memory corruption) by using crafted Flash content that leverages  improper handling of the opaqueBackground property. This issue exists in Adobe  Flash Player embedded in iMC.</li>
+  <li>CVE-2014-8176. If a DTLS peer receives application data between  ChangeCipherSpec and Finished messages, buffering of such data may cause an  invalid free, resulting in a segmentation fault or potentially, memory  corruption.</li>
+  <li>CVE-2015-1788. OpenSSL enters an infinite loop when processing an  ECParameters structure in which the specified curve is over a  specially-malformed binary polynomial field. This vulnerability might be  exploited to perform DoS attacks against any system that processes public keys,  certificate requests, or certificates.</li>
+  <li>CVE-2015-1789. X509_cmp_time does not properly check the length of  the ASN1_TIME string and can read a few bytes out of bounds. In addition,  X509_cmp_time accepts an arbitrary number of fractional seconds in the time  string. An attacker might craft malformed certificates and CRLs of various  sizes and potentially cause a segmentation fault, resulting in a DoS attack on  applications that verify certificates or CRLs.</li>
+  <li>CVE-2015-1790. The PKCS#7 parsing code does not handle missing inner  EncryptedContent correctly. An attacker can craft malformed  PKCS#7 blobs with missing content  and trigger a NULL pointer dereference on parsing.</li>
+  <li>CVE-2015-1791. The race condition vulnerability might be exploited to  launch a double free of the ticket data by using NewSessionTicket when a  multi-threaded client attempts to reuse a previous ticket.</li>
+  <li>CVE-2015-1792. The CMS code can enter an infinite loop when verifying  a signedData message that contains an OID of an unknown hash function. The  issue causes the system to be vulnerable to DoS attacks.</li>
+</ol>  
+<h3>Resolved Problems in IMC PLAT 7.1 (E0303L15)</h3>
+<ol>
+  <li>Security vulnerability exists on components of the IMC  platform that use the OpenSSL library.</li>
+  <li>When SSA monitors multiple servers, the collected data  is incorrect.</li>
+  <li>The system obtains incorrect server information when  multiple operators perform server operations at the same time. For example, an  operator synchronizes Server A information while another operator adds Server B  to SSA management.</li>
+  <li>After SSA on a Linux server is upgraded from the basic  version to iMC PLAT 7.1 (E0303P14), the system displays an error page when an  operator performs auto discovery of servers.</li>
+  <li>When servers are deleted from a custom view, the system  automatically deletes the servers from server resources.</li>
+  <li>When <strong>Per-class  statistics - All Alarms</strong> is enabled in the display tiling configuration, the  alarm panel cannot correctly display the per-class alarm statistics.</li>
+  <li>An operator clicks a MAC address in the online client list  of WLAN Manager to view the details. However, display of the MAC address  details page is incorrect.</li>
+  <li>An operator clicks an AP label in the fit AP list of  WLAN Manager to view the details. However, display of the AP details page is incorrect.</li>
+  <li>When <strong>Per-class  TopN alarms - Configuration Alarms</strong> is enabled in the dashboard  configuration, the alarm panel data filtered by alarm class is incorrect.</li>
+  <li>After upgrade to a version later than iMC PLAT 7.1  (E0303P13), the system foreground generates logs with an excessive file size.</li>
+  <li>The system generates a &quot;415 Unsupported Media  Type&quot; error when executing a RESTful interface by a PUT request through  Swagger.</li>
+  <li>The system cannot generate V2 periodic reports that  include parameters of long integer type.</li>
+  <li>The RADIUS server configuration and interface 802.1X  configuration cannot be made on the device details page for Comware V7 devices.</li>
+  <li>NETCONF is not upgraded with the IMC platform upgrade to  iMC PLAT 7.1 (E0303) or later, because the NETCONF upgrade package is not  decompressed in the upgrade.</li>
+  <li>This symptom occurs when a user views the dashboard  that contains the per-level alarm trend chart. The dashboard displays data incorrectly.</li>
+  <li>This symptom occurs when a user adds the per-level  alarm trend chart (the alarm class is all alarms) and the per-class statistics  trend chart (the alarm class is configuration alarms) to the dashboard and  monitors alarms for some time. Curves of the per-level alarm trend chart fall at  irregular intervals.</li>
+  <li>This symptom occurs when a user selects a device on  the Applet network topology, right-clicks the device, and then selects Open  Device Panel from the shortcut menu. A page error occurs when a user accesses the device  panel.</li>
+  <li>This symptom occurs when Enable Mail Notification is selected  in license expiration mail notification settings on the system settings page. The mail content is incorrect and the mail format  requires optimization.</li>
+  <li>This symptom occurs when a user accesses the system  settings page with the alarm module not installed. Accessing the system settings page takes a long time.</li>
+  <li>This symptom occurs when a user clicks Add Link on the  link management page for a custom topology. An error for the Add Link page occurs.</li>
+  <li>This symptom occurs when a maintainer logs in to iMC  and double-clicks a cloud in the converged topology. A maintainer fails to open the topology for a cloud.</li>
+  <li>This symptom occurs when a user clicks the Add Link  icon on the converged topology, or right-clicks the converged topology and  selects Add Link from the shortcut menu. An error for the Link Management page occurs.</li>
+  <li>This symptom occurs when a user clicks Save in the  toolbar on the converged topology. The note and the background area cannot be saved.</li>
+  <li>This symptom occurs when a uses accesses a REST API. The associated model schema for a REST API does not  exist.</li>
+  <li>This symptom occurs after the WSM component is  installed. The REST APIs of license management are unavailable  and the response codes are 404. </li>
+  <li>This symptom occurs when a maintainer who has no  management rights to self-service accounts modifies a user. A page error occurs when a maintainer attempts to  modify a user.</li>
+  <li>This symptom occurs when the SSA version is upgraded  from iMC PLAT 7.1 (E0303) to iMC PLAT 7.1 (E0303P13). A page error occurs when a user configures server  power supply trap information.</li>
+  <li>This symptom occurs when iMC had ever been started  before it was upgraded to iMC PLAT 7.1 (E0303P13). The Device Asset Report(Concise) cannot be obtained  after iMC was upgraded to iMC PLAT 7.1 (E0303P13).</li>
+  <li>This symptom occurs when a user exports the Device  Asset Report(Concise). The summary report at the end of the Device Asset  Report(Concise) is displayed incorrectly after the Device Asset Report(Concise)  is exported to an EXCEL file.</li>
+  <li>This symptom occurs when the performance management  module is installed and monitoring objects are added in iMC that runs in Linux  and uses an Oracle database. The performance background process restarts sometimes.</li>
+  <li>This symptom occurs when a user deploys the alarm  management module of the iMC PLAT 7.1 (E0303P13) version, undeploys and removes  the module, and then deploys the module again. An error occurs during the deployment of the alarm management  module of the iMC PLAT 7.1 (E0303P13) version.</li>
+  <li>This symptom occurs when the sending alarm SMS message  feature is enabled in iMC that runs in Linux. Alarm SMS messages cannot be received.</li>
+  <li>In  the intelligent deployment monitoring agent, the automatic recovery function is  enabled and operates for a period of time. Then automatic recovery failed and  the disk is filled with logs.</li>
+</ol>
+<h3>Resolved Problems in IMC PLAT 7.1 (E0303P13)</h3>
+<ol>
+  <li>Operation logs are not recorded when you add, delete, or modify the dashboard view.</li>
+  <li>The Y-axis names of the monitoring charts are not completely displayed when you view the realtime performance monitoring page on the IE11 browser.</li>
+  <li>The GSM modem name is incorrectly displayed when you view the GSM modem configuration on the SMSC settings page.</li>
+  <li>Data is incorrectly displayed when you add multiple performance views in a single view of the dashboard.</li>
+  <li>A page error occurs when you save devices for which monitor is canceled as a new view.</li>
+  <li>You can add monitor, cancel monitor, and modify thresholds on the monitor settings page when you log in as a viewer.</li>
+  <li>The interfaces for a link cannot be displayed when you add a link in the Applet topology.</li>
+  <li>The IMC platform components have 13 OpenSSL security vulnerabilities.</li>
+  <li>Attackers are allowed to establish connections with users by sending unauthorized requests because the IMC platform components have the cURL and libcurl security vulnerabilities CVE-2015-3143 and CVE-2015-3148.</li>
+  <li>APM fails to obtain monitoring data when monitoring the FTP server.</li>
+  <li>The HP 10508 switch panel is incorrectly displayed when the page for displaying the switch panel is opened.</li>
+  <li>The HP 5900 switch panel is incorrectly displayed on the rack topology when the switch is added to the rack in the data center topology. </li>
+
+</ol>
+
+<h3>Resolved Problems in IMC PLAT 7.1 (E0303H12)</h3>
+<ol>
+  <li>When device configuration files are backed up in batches periodically through TFTP and some devices are unreachable, all TCP ports of the IMC server are used up after some time.</li>
+  <li>When automatic backup is enabled on the primary IMC server and automatic restoration on the backup IMC server, and the size of a database file that the primary IMC server backs up exceeds 2 GB, automatic restoration fails on the backup IMC server.</li>
+  <li>When a subview is selected for an automatic backup plan, the parent view of the subview still can be selected for another automatic backup plan.</li>
+  <li>When a user views details of hpicfArpProtectErrantReply and hpicfDhcpSnoopErrantReply traps in IMC, the MAC address and IP address fields on details pages of hpicfArpProtectErrantReply and hpicfDhcpSnoopErrantReply traps display illegible characters.</li>
+  <li>When a view of the dashboard has multiple performance views, the dashboard displays data incorrectly.</li>
+  <li>On the monitoring settings page, when a user cancels monitoring for a device, selects the device, and then clicks Save as New View, a page error occurs.</li>
+  <li>When a user views and modifies a deleted data entry on the service monitoring page, a page error occurs.</li>
+  <li>In the Web desktop edition of IMC, when a user accesses the performance option page by clicking the Default Monitoring Indexes link, clicks Set, and then clicks Select Colors, a page error occurs.</li>
+  <li>A user fails to sort the interface traffic list on the At A Glance page by clicking the Monitored Objects field of the list.</li>
+  <li>When a user views the user tracking report in IMC that uses the MySQL database with more than 150000 records in the config_db.tbl_l2topo_user_tracking table, the CPU usage of the MySQL process on the IMC server is more than 95 percent and the user tracking report cannot be displayed for a long time.</li>
+  <li>If a user accesses the System > System Configuration > iMC Server Info page when CPU and memory information about the IMC server cannot be collected, a page error occurs.</li>
+
+</ol>
+
+<h3>Resolved Problems in IMC PLAT 7.1 (E0303L11)</h3>
+<ol>
+  <li>When a SNMP device is added with the device category as PC and then the device category of the SNMP device is modified to SNMP, IMC fails to recognize the Comware platform software version (V3, V5, or V7) of the device.</li>
+  <li>When a user logs into IMC, accesses the report module, and then exports Custom View Data Summary Report V2 in the CVS format, the first column of the exported report is empty.</li>
+  <li>When a periodic report of Device Category Statistics Report V2 is added, the generated history report Device Category Statistics Report V2 has only the title, without data and legends.</li>
+  <li>When the Y-axis name is set to a long string and the Y-axis unit is set to a short string at the same time or the Y-axis name is set to a short string and the Y-axis unit is set to a long string at the same time, the real-time performance monitoring page collapses.</li>
+  <li>When a viewer logs in to IMC, the viewer has rights to add monitors, modify monitors, and modify properties on the monitor settings page.</li>
+  <li>When a user views Performance View Summary Report V2, the report has no data.</li>
+  <li>When more than 10 device additional information items are added for a device, the device additional information items on the details page of the device have duplicate data.</li>
+  <li>When a user adds devices by clicking the <b>Add Device</b> link on the device view page, the user fails to add devices.</li>
+  <li>After a user adds a custom view with the <b>Automatically Add New Devices</b> field set to <b>From Designated Rule</b> in a MySQL environment, a page error occurs when viewing or modifying the custom view.</li>
+  <li>When DBMan is used for auto backup and auto restoration, DBMan performs only the auto backup operation without performing the auto restoration operation.</li>
+  <li>If multiple auto backup plans are executed at the same time point, some of the mails that send backup results to users are lost.</li>
+
+</ol>
+
+<h3>Resolved Problems in IMC PLAT 7.1 (E0303P10)</h3>
+<ol>
+  <li>After the IMC platform is upgraded to the SP10 version without the deployment of the performance management module, the IMC logon page prompts the script execution failure for the performance report.</li>
+  <li>If an operator has access to a performance view but has no access to the folder to which the performance view belongs, a repot page error occurs when the operator attempts to view the Performance View All Summary Report for all performance views or the Performance View Summary Report for the performance view.</li>
+  <li>When a user accesses the HTML5 topology in H3C SNS IMC and clicks a device node on the topology, the performance information for the device does not appear on the topology.</li>
+  <li>When the alarm module is not installed with the IMC platform, the mail sever settings feature in the IMC platform is not supported.</li>
+  <li>When a user uses IE 11 to access the IMC home page and views a widget that has much data, the scrollbar bar does not appear on the widget.</li>
+  <li>When the By Device Model option is selected in the filter settings in the auto discovery plan, a user fails to delete existing device models.</li>
+  <li>When a large number of devices are configured at the same time, imccmdmdrdm runs a large number of processes each named scripttool and the CPU usage reaches 100%.</li>
+  <li>When alarms are recovered manually and the hierarchical alarming feature is disabled, IMC still sends recovery alarms to the registered upper-level network management address.</li>
+  <li>When IMC contains over 7000 devices, device operations such as device deletion or polling interval configuration fail or only partially succeed.</li>
+  <li>An operator unmanages an unreachable device, and then manages the device again after the device becomes reachable. However, the device is not in Normal state although it does not include unrecovered alarms.</li>
+  <li>After IMC is upgraded to support periodic monitoring, performance data that already exists before the upgrade becomes unavailable for devices that are not monitored by any periodic monitors.</li>
+  <li>The 3D panel of a Huawei AR28-31 device does not display interface or status information.</li>
+  <li>The Environment Monitor page of a device crashes when an operator makes another attempt to reset a board after a failed reset.</li>
+  <li>A server or network error occurs when an operator configures SNMP parameters on the System > Resource Management > MIB Management page by using the Config SNMP parameter tool.</li>
+  <li>When a user views the performance data, the performance module displays the maximum and minimum data values for a time range (this week or this month) that are calculated based on the weighted average algorithm instead of the original maximum and minimum data values for a time range. </li>
+  <li>When IMC is configured to send SMS messages to the specified mobile phone numbers by using the Convert Mail into SMS method, some of the specified mobile phone numbers fail to receive SMS messages.</li>
+  <li>If the commonThirdpartyAppContext.xml file in the \client\conf\ directory of the IMC installation path is edited, the file is overwritten by the default file after an IMC upgrade.</li>
+  <li>When IMC monitors about a large number of devices (about 1800), accessing the device view page takes about three minutes.</li>
+  <li>When the home page has multiple Port Group TopN widgets that have different configuration parameters, data display errors occur for these widgets.</li>
+  <li>After the common indexes in the performance option in the IMC platform are modified, the common indexes in RSM are inconsistent with those in the IMC platform when a user adds a monitor in RSM.</li>
+  <li>When IMC has a large number monitor instances and the value of the Interface Info Display field on the System > System Settings page is set to Interface Alias, the loading time for the Resources > Monitoring page is slow.</li>
+  <li>In IMC 7.1 E0303, device display of HP 5130 causes termination with java errors.</li>
+  <li>When IMC is configured to send SMS messages through a GSM modem and alarm statistics SMS is enabled, an SMS message containing special characters ~^|[]{} cannot be correctly displayed after it is received.</li>
+
+</ol>
+
+<h3>Resolved Problems in IMC PLAT 7.1 (E0303L08)</h3>
+<ol>
+  <li>During periods of poor network conditions or slow TFTP server/client processing speed, the system automatically deploys large resource files to a newly discovered server through TFTP. However, the file transfer process is slow and causes high CPU usage. </li>
+  <li>IMC is configured to log in to a device through Telnet or SSH by using the Username + Password authentication mode. However, it still tries to use the super password for device login.</li>
+  <li>When accessing a device through SSH, IMC connects to the default SSH port (TCP port 22) instead of the SSH port specified for the device in the IMC platform. </li>
+  <li>It takes the system about 30 minutes to start the performance management process when the number of monitored devices exceeds 10000.</li>
+  <li>In a periodic performance monitor group, the alarm threshold of a device monitor index is exceeded during a non-work time period. The system generates an alarm for the device even though the device's performance data is not displayed.</li>
+  <li>When an administrator adds a maintainer or viewer, the manageable device groups, user groups, and custom views assigned to the maintainer or viewer cannot be saved.</li>
+  <li>A page error occurs when an operator attempts to add a maintainer or viewer with specified manageable Level 1 location views in the WSM privilege management area.</li>
+  <li>An operator adds a routing-based auto discovery plan and then a network segment-based auto discovery plan, but cannot enter the modification page of the routing-based auto discovery plan.</li>
+  <li>An operator accesses the IMC home page by using IE 10. After the operator clicks a device name in the performance TopN widget, the device detailed information appears in the widget instead of a separate device details page.</li>
+  <li>Operators can view information about interface views on the Interface View TopN widget even if they do not have access to these views.</li>
+  <li>An operator uploads a background file on the Regional Map Configuration page for display tiling, backs up data by using DBman, reinstalls IMC, and restores data to IMC. Then the display tiling feature fails to load the background file.</li>
+  <li>When IMC runs on Linux and uses an Oracle database, an operator cannot access the MAC vendor configuration page.</li>
+  <li>On the IMC [RAM-Service deployment] page, the following configuration is deployed: bandwidth guarantee, traffic shaping, QoS access control, CAR rate limiting, CBQ policy, and interface rate limiting. However, commands on the deployment details page are not displayed in separate lines.</li>
+</ol>
+<h3>Resolved Problems in IMC PLAT 7.1 (E0303L07)</h3>
+<ol>
+  <li>When the amount of the device MIB information is large, page errors might occur. </li>
+  <li>If a new icon file is uploaded when modifying the device icon, the new device icon displays differently from the original icon in size on the custom topology of the HTML5 topology. </li>
+  <li>If IMC uses a MySQL database, the compliance check task remains in running state for a device with a large configuration file.</li>
+</ol>
+<h3>Resolved Problems in IMC PLAT 7.1 (E0303P06)</h3>
+<ol>
+  <li>If a compliance check task of more than 180 days is deleted by the system, the compliance check task might fail to be executed after IMC is restarted.  </li>
+  <li>A VLAN fails to be deleted on the VLAN device information page. </li>
+  <li>When you add or modify a DNS service monitor on the Service Monitoring page, you can input up to 32 characters for the FQDN. </li>
+  <li>On the performance monitoring data statistics page, when you switch between time ranges or open a sub-page, the data statistics are not refreshed and you are logged out. </li>
+  <li>Link-down traps for aggregation group member ports are repeatedly generated though the aggregation group member ports are always down.</li>
+  <li>After you configure interface trap filtering in batches, the interface traps are not filtered.</li>  
+  <li>If a non-admin operator configured with custom device group privilege exports alarms into a .CSV file on the All Alarms page, the exported .CSV file does not have data. </li>
+  <li>The security vulnerabilities CVE-2014-3566 are fixed.</li>
+</ol>
+<h3>Resolved Problems in IMC PLAT 7.1 (E0303H03)</h3>
+<ol>
+  <li>In the Linux system which enable both IPv4 and IPv6, import device software fails.</li>
+  <li>If you perform the SNMP test when the device location information is null, the SNMP test fails.</li>
+  <li>Page errors occur when a user adds, modifies, and copy mail notifications on the <b>Alarm Notification</b> page.</li>
+  <li>An operator who has customized homepage widgets logs in to IMC and customizes homepage widgets again, but the modifications for the homepage widgets cannot be saved.</li>
+  <li>IMC sends alarm notifications through a SMS sender and  mobile phones fails to receive the SMS messages of alarm notifications.</li>
+  <li>A user adds a performance widget on the Flex-based display tiling page, right clicks on the performance widget and selects <b>Parameter Configuration</b> from the shortcut menu, and then clicks <b>Add Instance</b> on the page that appears. The user fails to add a monitor instance.</li>
+  <li>A user fails to add or modify device groups on a Linux host with Oracle database.</li>
+  <li>When a user points to an alarm level legend at the lower-left corner of the IMC home page, the alarm statistics graph for the  alarm level does not appear. However, IMC displays the alarm statistics graphs correctly on other pages when the same operations are performed.</li>
+  <li>A user accesses the <b>Access Details</b> or <b>Online Users</b> page and adds multiple columns by clicking <b>Customize GUI</b>, but IMC fails to automatically resize columns.</li>
+  <li>When you modify the users that an account name belongs to through the user modifying function of the platform, clicking an account name on the <b>All Access Users</b> list causes an error. </li>
+  <li>In a stateless failover environment where all platform components are deployed on the active host and the GAM component is not deployed on the standby host, you will fail to immediately restore the  database on the standby host.</li>
+</ol>
+<h3>Resolved Problems in IMC PLAT 7.1 (E0303L02)</h3>
+<ol>
+  <li>A viewer can access the <b>System &gt; Panel Management </b> page by entering the URL of the page in the address bar, and then perform all administrative operations on the page.</li>
+  <li>The monitor graph of RMON statistics groups on a device displays an incorrect time axis that does not match the actual time. </li>
+  <li>An operator cannot access the device details page by clicking the device label of an HP 1950 device. </li>
+  <li>If a performance view contains performance trend graphs with breaks in them, the following reports are unavailable: Performance Data Detail Report and View Format Line Chart Report.</li>
+  <li>Newly-added custom TopN monitor widgets display incorrect data after a refresh on the home page. </li>
+  <li>When IMC monitors more than 2100 devices, a viewer cannot access the <b>Resource &gt; Monitoring Settings </b> page.</li>
+   <li>The Performance Trend widget for display tiling lacks data of some monitoring instances if not all instances use the same collection time interval.</li>
+  <li>IMC is stuck on loading if an operator attempts to display the Monitoring Settings page for a large number of monitored devices.</li>
+  <li>The Resource > Service Monitoring page becomes faulty after an operator clicks the Real-time Monitoring icon on the performance data page of an instance. The problem persists even if the operator exits and relogs in to IMC.</li>
+  <li>After IMC is upgraded to the 7.1(E0302) version, some page responds slowly.</li>
+</ol>
+<h3>Resolved Problems in IMC PLAT 7.1 (E0303L01)</h3>
+<ol>
+  <li>Error page occur if the ACL Devices Only box is cleared on the ACL device page when the number of devices in the platform exceeds 2100. </li>
+</ol>
+<h3>Resolved Problems in IMC PLAT 7.1 (E0303)</h3>
+<ol>
+  <li>The enterprise edition should include the NTA component.</li>
+  <li>Sounds on the alarm panel cannot be muted from the sound settings.</li>
+</ol>
+<h3>Resolved Problems in IMC PLAT 7.1 (E0302)</h3>
+<ol>
+  <li>The "Server Errors" message might appear when you perform either of the following tasks: 1) Add custom indexes on the Resource > Global Index Settings page. 2)	Query indexes on the Resource &gt; Global Index Settings page.</li>
+  <li>The Liveupdate feature failed.</li>
+</ol>
+<p>[ <a href="#toc">Table of Contents</a> ]</p>
+<hr>
+
+<h2><a name="IMC-Software-Distribution-Contents">IMC Software Distribution Contents</a></h2>
+<p>The IMC PLAT 7.2 (E0403) distribution list contains the following files and folders:</p>
+<ol>
+  <li><b>manual\readme_plat_7.2 (E0403).html</b> - This file</li>
+  <li><b>windows\install</b> - IMC installation program</li>
+  <li><b>linux\install</b> - IMC installation program for Red Hat Enterprise Linux</li>  
+</ol>
+<p>[ <a href="#toc">Table of Contents</a> ]</p>
+<hr>
+
+<h2><a name="installReqs">Installation Prerequisites</a></h2>
+<p><font size="4">Server Requirements</font></p>
+<p>The following are the minimum hardware and software requirements for running IMC on a PC server:</p>
+<blockquote>
+  <ul>
+    <li>Minimum hardware requirements
+      <ul>
+        <li>Pentium 4 3.0 GHz processor</li>
+        <li>4 GB of RAM</li>
+        <li>50 GB hard disk space</li>
+      </ul>
+    </li><br>
+
+    <li>Operating system (Versions marked X64 are recommended):
+      <ul>
+        <li>Windows Server 2008 with Service Pack 2</li>
+        <li>Windows Server 2008 X64 with Service Pack 2</li>
+        <li>Windows Server 2008 R2 with Service Pack 1</li>
+        <li>Windows Server 2012 with KB2836988</li>
+        <li>Windows Server 2012 R2</li>
+        <li>Red Hat Enterprise Linux 5.5 (Enterprise and Standard versions only)</li>
+        <li>Red Hat Enterprise Linux 5.5 X64 (Enterprise and Standard versions only)</li>
+        <li>Red Hat Enterprise Linux 5.9 (Enterprise and Standard versions only)</li>
+        <li>Red Hat Enterprise Linux 5.9 X64 (Enterprise and Standard versions only)</li>
+        <li>Red Hat Enterprise Linux 6.x X64 (Enterprise and Standard versions only)</li>
+        <li>Red Hat Enterprise Linux 7.x X64 (Enterprise and Standard versions only)</li>
+      </ul>
+    </li><br>
+    <li>VMware:
+      <ul>
+        <li>VMware Workstation 6.5.x</li>
+        <li>VMware Workstation 9.0.x</li>
+        <li>VMware ESX Server 4.x</li>
+        <li>VMware ESX Server 5.x</li>
+      </ul>
+    </li><br>
+    <li>Hyper-V:
+      <ul>
+        <li>Windows Server 2008 R2 Hyper-V</li>
+        <li>Windows Server 2012 Hyper-V</li>
+      </ul>
+    </li><br>
+    <li>Database
+      <ul>
+        <li>Microsoft SQL Server 2008 Service Pack 3 (Windows only)</li>
+        <li>Microsoft SQL Server 2008 R2 Service Pack 2 (Windows only)</li>
+        <li>Microsoft SQL Server 2012 Service Pack 2 (Windows only)</li>
+        <li>Microsoft SQL Server 2014 (Windows only)</li>
+        <li>Oracle 11<i>g</i> Release 1 (Linux only)</li>
+        <li>Oracle 11<i>g</i> Release 2 (Linux only)</li>
+        <li>Oracle 12<i>c</i> Release 1 (Linux only)</li>
+        <li>MySQL Enterprise Server 5.5 (Linux and Windows) (Up to 1000 devices are supported)</li>
+        <li>MySQL Enterprise Server 5.6 (Linux and Windows) (Up to 1000 devices are supported)</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+<p>Note: 64-bit operating systems are recommended over 32-bit operating systems
+  because of the larger amount of available memory for applications.</p>
+<p>Note: Optimal hardware requirements vary with scale, other management factors,
+  and are specific to each infrastructure.  Please consult HP, or your local
+  account teams and precise requirements can be provided.</p>
+<p><font size="4">GSM modem (optional)</font></p>
+<p>A GSM modem is required for forwarding alarm messages. The following models have been tested to work with IMC. For more information about a specific GSM modem, see its product manual.</p>
+<blockquote>
+  <ul>
+    <li>WaveCom M2306B</li>
+    <li>WaveCom TS-WGC1 (Q2403A)</li>
+    <li>Wanxiang serial port GSM modem (DG-C1A)</li>
+    <li>Wanxiang USB GSM modem (DG-U1A)</li>
+    <li>Wanxiang USB min GSM modem (DG-MINI)</li>
+    <li>WaveCom M1206B GSM modem (chip: 24PL)</li>
+    <li>WaveCom USB M1206B GSM modem (chip: Q24PL, Q2403A)</li>
+  </ul>
+</blockquote>
+<p>[ <a href="#toc">Table of Contents</a> ]</p>
+<hr>
+
+<h2><a name="clientReqs">Client Prerequisites</a></h2>
+<p><font size="4">PC Requirements</font></p>
+<blockquote>
+  <ul>
+    <li>Minimum hardware requirements
+      <ul>
+        <li>2.0 GHz processor</li>
+        <li>2048 MB of RAM</li>
+        <li>50 GB hard disk space</li>
+      </ul>
+    </li><br>
+    <li>Operating system
+      <ul>
+        <li>Windows XP SP3 or later</li>
+      </ul>
+    </li><br>
+    <li>Browser
+      <ul>
+        <li>IE 10 or 11 is recommended.</li>
+        <li>Firefox 30 or later is recommended.</li>
+        <li>Chrome 35 or later is recommended.</li>
+        <li>Turn off the blocking settings in the browser.</li>
+        <li>Add the IMC website to the trusted sites of the browser.</li>
+        <li>The recommended resolution width is 1280.</li>
+        <li>JRE 1.6.0_update27 or later is recommended. If a client has no JRE, 
+        	IMC prompts the user to install JRE for the client.</li>
+      </ul>
+    </li><br>
+  </ul>
+</blockquote>
+<p>[ <a href="#toc">Table of Contents</a> ]</p>
+<hr>
+
+<h2><a name="upgradeInstallation">Installing and Upgrading IMC</a></h2>
+<p>To install IMC on Windows Server 2008, Windows Server 2008 R2, Windows Server 2012 or  Windows Server 2012 R2, first modify the user account control settings:</p>
+<ol>
+  <li>Open the Control Panel from the Start menu and click <b>System and Security</b>.</li>
+  <li>In the <b>Action Center</b>, click the <b>Change User Account Control Settings</b> link.</li>
+  <li>In the <b>User Account Control Settings</b> window, set the <b>Choose when to be notified about changes to your computer</b> to <b>Never notify</b>.</li>
+</ol>
+<p>To upgrade IMC:</p>
+<ol>
+  <li>Back up the IMC database on the <b>Environment</b> tab in the Deployment Monitoring Agent.</li>
+  <li>Manually copy the IMC installation directory to a backup path.</li>
+  <li>Stop IMC in the Deployment Monitoring Agent.</li>
+  <li>Click <b>Install</b> on the <b>Monitor</b> tab of the Deployment Monitoring Agent</li>
+  <li>Select the <b>windows/install/components</b> directory in the upgrade package and click <b>OK</b>.</li>
+  <li>Click <b>OK</b> in the popup message dialog box.</li>
+  <li>Click <b>Start</b> in the <b>Upgrade Common Components</b> dialog box to upgrade common components.</li>
+  <li>After common components are upgraded, click <b>Close</b>.</li>
+  <li>In distributed deployment mode, stop the Deployment Monitoring Agent on the master server and
+    restart the Deployment Monitoring Agent on every subordinate server. Click <b>Yes</b> in the
+    popup message dialog box to upgrade common components on every subordinate server.</li>
+  <li>The Deployment Monitoring Agent displays all components that need to be upgraded. Click <b>OK</b> to start upgrading.</li>
+  <li>In distributed deployment mode, upgrade all components deployed on every subordinate server.</li>
+  <li>After all components are updated, start all processes in the Deployment Monitoring Agent.</li>
+</ol>
+<p>For more information about installation and upgrade procedures, see <i>IMC Getting Started Guide</i> and IMC deployment guides.</p>
+<font color="#ff0000">Important:<ol>
+  <li><i>Before you upgrade the IMC Platform, download upgrade packages for all deployed service components from HP's website, 
+  	and before you install them pay special attention to the section "Platform Compatibility" in their readme.
+    If an upgrade package is not available for a service component, HP recommends not upgrading the IMC Platform, or you can
+    remove the service component before upgrading the IMC Platform. When the service component is removed, its data is lost.</i></li>
+  <li><i>If the Deployment Monitoring Agent displays a list of components incompatible with the new version of the IMC Platform,
+    you must download upgrade packages for these components before you can continue the upgrade process.</i></li>
+  <li><i>All service components must use v7.0 or higher to work with IMC PLAT 7.0. After the IMC Platform is upgraded, upgrade the
+    deployed service components, such as WSM, UAM, EAD, NTA/UBA, APM, and SOM. Before installing or upgrading a service component 
+    on this platform software, please verify the section "Platform Compatibility" in the service component¡¯s readme. 
+    Otherwise, IMC might not be started. For the compatibility matrix, see readme files of the service components.</i></li>
+  <li><i>If you receive the message "Upgrade JVM failed..." during the upgrade process, delete the folder in the <b>\common\jre</b>
+    directory of the IMC installation path and continue to upgrade.</i></li>
+  <li><i>For data integrity, HP recommends backing up database on the <b>Environment</b> tab of the Deployment Monitoring Agent,
+    and copying the IMC installation directory to a secure location after the upgrade. </i></li>
+</ol></font>
+<p>[ <a href="#toc">Table of Contents</a> ]</p>
+<hr>
+<h2><a name="uninstall">Removing IMC</a></h2>
+<p>To remove IMC on Windows, run the uninstallation wizard by selecting <b>All Programs &gt; Intelligent Management Center &gt; Uninstall IMC</b>
+  from the Start menu, or you can remove the Intelligent Management Center in the <b>Add or Remove Programs</b> window of the Control Panel.</p>
+<p>To remove IMC on Linux, enter the <b>deploy</b> directory of the IMC installation path by using the <b>cd</b> command, and then execute
+  <b>uninstall.sh</b>. IMC is typically installed in the <b>/opt/iMC</b> directory.</p>
+<p>Follow the directions in the uninstallation wizard, and manually delete all files in the IMC directory when the process is complete.</p>
+<p>[ <a href="#toc">Table of Contents</a> ] </p>
+<hr>
+<h2><a name="rundma">Running the Deployment Monitoring Agent</a></h2>
+<p>The Deployment Monitoring Agent is a GUI program to manage the deployment of the IMC modules and
+  monitor the performance and the state of processes of the IMC server. After the installation finished,
+  the Deployment Monitoring Agent is automatically started to guide the user through deployment.</p>
+<p>On Windows, run the Deployment Monitoring Agent by selecting <b>All Programs &gt; Intelligent Management Center
+  &gt; Deployment Monitoring Agent</b> from the Start menu. On Linux, run the Deployment Monitoring Agent by
+  executing <b>dma.sh</b> in the <b>deploy</b> directory of the IMC installation path.</p>
+<p>If Deployment Monitoring Agent cannot start, make sure the HP IMC Server service is running. This service is automatically
+  started along with the OS and runs as a daemon/background process. On Windows, you can start the service in Windows Services.
+  On Linux, you can start the service with the <b>service imcdmsd start</b> command.</p>
+<p>IMC must be started from the Deployment Monitoring Agent.</p>
+<p>[ <a href="#toc">Table of Contents</a> ] </p>
+<hr>
+<h2><a name="runserver">Starting IMC</a></h2>
+<p>To start IMC, click <b>Start IMC</b> on the <b>Monitor</b> tab of the Deployment Monitoring Agent.</p>
+<p>[ <a href="#toc">Table of Contents</a> ] </p>
+<hr>
+<h2><a name="usingimc">Logging in to IMC through a Web Browser</a></h2>
+<p>Once the server is running, you can access the IMC user interface using a Web browser. Enter the following address in the Address Bar of a browser:</p>
+<blockquote>
+  <p><kbd>http://<em>hostname</em>:<em>port</em>/imc</kbd></p>
+</blockquote>
+<p>Where <em>hostname</em> is the host name or IP address of the IMC server
+(the default is localhost if you launch the Web browser on the IMC server machine),
+and <em>port</em> is the Web server port (the default is 8080) used by IMC.</p>
+<p>You can also access the IMC user interface with Web browser through HTTPS.
+Enter the following address in the address bar of a browser:</p>
+<blockquote>
+  <p><kbd>https://<em>hostname</em>:<em>port</em>/imc</kbd></p>
+</blockquote>
+<p>Where <em>hostname</em> is the host name or IP address of the IMC server
+(the default is localhost if you launch the Web browser on the IMC server machine),
+and <em>port</em> is the Web server port for HTTPS (the default is 8443) used by IMC.</p>
+<p>When the IMC login page appears, use the username "admin" and password "admin" to log into IMC.</p>
+<p>Refer to the IMC Online Help for details on how to add operators, and add your devices to IMC.</p>
+<p>The default security level in the IE properties is High. If you try to log in to IMC with this default, 
+	the system will prompt "Content from the Web site listed below is being blocked by the Internet 
+	Explorer Enhanced Security Configuration." Click Add to add the IMC website to the trusted sites. 
+	If you do not add the IMC website to the trusted sites and determine not to display the prompt any more, 
+	you may fail to log in to IMC. To solve the problem, use either of the following methods:
+<ol>
+	<li>Set the security level to <b>Medium</b>.
+		<ul>
+			<li>Start IE and select <b>Tools &gt; Internet Options</b>.</li>
+			<li>Select the <b>Security</b> tab, and then click <b>Custom Level</b>.</li>
+			<li>In the popup dialog box, set the security level to <b>Medium</b>.</li>
+		</ul>
+	</li>
+	<li>Add the website of the IMC server to the trusted sites.
+		<ul>
+			<li>Start IE and select <b>Tools &gt; Internet Options</b>.</li>
+			<li>Select the <b>Security</b> tab, Select <b>Trusted sites</b>, and the click <b>Sites</b>.</li>
+			<li> Add the website of the IMC server in the popup dialog box.</li>
+		</ul>
+	</li>
+</ol>
+</p>
+<p>On your first access to <b>Resource &gt; Network Topology</b>, the browser prompts
+  "The application's digital signature cannot be verified. Do you want to run the application?"
+  Below the prompt are the name "topo", and the publisher "IMC Development Team".
+  Select the "<b>Always trust content from this publisher</b>" checkbox, and click <b>Run</b>.</p>
+<p><font color="#ff0000"><b>Note: </b><i>In centralized deployment, when the "User Access Manager -
+  User SelfService" component is deployed, you will enter the Self-Service login page rather than the
+  IMC login page if you enter <b>http://hostname:port/</b> in the address bar. To enter the IMC login page,
+  change the string following <b>window.location.href=</b> into <b>'/imc/login.jsf';</b> in the
+  index.html file in directory <b>\client\web\apps\ROOT</b>.</i></font></p>
+<p>[ <a href="#toc">Table of Contents</a> ] </p>
+<hr>
+
+<h2><a name="monitoring">Monitoring the Server</a></h2>
+<p>On the <b>Monitor</b> tab of the Deployment Monitoring Agent, you can see the Disk Usage, CPU Usage,
+  and Physical Memory Usage of the IMC server. On the <b>Process</b> tab of the Deployment Monitoring
+  Agent, you can see all IMC processes and their running status. On the <b>Environment</b> tab of
+  the Deployment Monitoring Agent, you can see the OS information and database usage.</p>
+<p>You can see the monitoring data of the IMC server only when IMC is started.
+  For information about starting IMC, see "<a href="#runserver">Starting IMC</a>".</p>
+<p>[ <a href="#toc">Table of Contents</a> ] </p>
+<hr>
+<h2><a name="distributed">Distributed Deployment</a></h2>
+<p>The IMC components can be installed on more than one server to meet specific performance requirements.
+  A distributed IMC system typically has one master server with IMC Platform deployed and multiple
+  subordinate servers with service components deployed.</p>
+<p>To install IMC on a subordinate server, execute the <b>installslave.bat</b> file on Windows
+  (or <b>installslave.sh</b> on Linux) by either double-clicking the file or running the command
+  in the folder where <b>installslave.bat</b> (or <b>installslave.sh</b>) is located.</p>
+<p>For information about deploying IMC in distributed mode, see IMC deployment guides.</p>
+<p>[ <a href="#toc">Table of Contents</a> ] </p>
+<hr>
+<h2><a name="platform">Platform Specific Issues</a></h2>
+<h3><a name="wingen">Windows - General Issues</a></h3>
+<ul>
+  <li>Please be especially careful about how filenames are capitalized and used. This is essential
+    in order to ensure consistent behavior across platforms that might use case-sensitive file systems.</li>
+</ul>
+<h3><a name="wingen">Linux - General Issues</a></h3>
+<ul>
+  <li>The IMC server must be run from a root user account in order to receive SNMP traps,
+    accept syslog messages, and facilitate ftp file transfers.</li>
+  <li>UNIX filenames are case sensitive. Care must be taken when references are made
+    to python scripts and xml files.</li>
+</ul>
+<p>[ <a href="#toc">Table of Contents</a> ] </p>
+<hr>
+<h2><a name="ports">Port Usage</a></h2>
+<p>IMC uses the following TCP/IP ports.</p>
+<table>
+  <thead>
+    <tr>
+      <th width="7%">Component</th>
+      <th width="10%">Subcomponent</th>
+      <th width="6%">Protocol</th>
+      <th width="5%">Port</th>
+      <th width="8%">Configurable</th>
+      <th width="32%">Use</th>
+      <th width="11%">Server</th>
+      <th width="12%">Client</th>
+      <th width="7%">Notes</th>
+    </tr>
+  <thead>
+  <tbody>
+    <tr>
+      <td>IMC Platform</td>
+      <td>-</td>
+      <td>TCP</td>
+      <td>8025</td>
+      <td>No</td>
+      <td>Used by the <strong>jserver</strong> process to receive the SHUTDOWN command. </td>
+      <td>IMC master server.</td>
+      <td>IMC master server.</td>
+      <td>Internal use.</td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>-</td>
+      <td>TCP</td>
+      <td>9091</td>
+      <td>No</td>
+      <td>JMX monitoring port used by the <strong>jserver</strong> process.</td>
+      <td>IMC master server.</td>
+      <td>IMC master server.</td>
+      <td>Internal use.</td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>-</td>
+      <td>TCP</td>
+      <td>9044</td>
+      <td>No</td>
+      <td>Used by the <strong>HP iMC Server</strong> service to receive the SHUTDOWN command.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td>Internal use.</td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>-</td>
+      <td>TCP</td>
+      <td>9055</td>
+      <td>No</td>
+      <td>Used by the <strong>Deployment Monitoring Agent</strong> process to receive the SHUTDOWN command.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td>Internal use.</td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>-</td>
+      <td>TCP</td>
+      <td>61616</td>
+      <td>No</td>
+      <td>Used for communication in a distributed deployment environment.</td>
+      <td>IMC master server.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td>Internal use.</td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>-</td>
+      <td>TCP</td>
+      <td>61626</td>
+      <td>No</td>
+      <td>Used for communication between the <strong>HP iMC Server</strong> and <strong>Deployment Monitoring Agent</strong> processes.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td>Internal use.</td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>Resource Management</td>
+      <td>UDP</td>
+      <td>161</td>
+      <td>No</td>
+      <td>Used to access network devices through SNMP.</td>
+      <td>Network devices.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>Resource Management</td>
+      <td>UDP</td>
+      <td>162</td>
+      <td>No</td>
+      <td>Used to receive SNMP Traps from network devices.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td>Network devices.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>Resource Management</td>
+      <td>TCP</td>
+      <td>22</td>
+      <td>No</td>
+      <td>SSH/SFTP port, which the configuration center uses to back up and restore
+        the device software and configuration file through SSH/SFTP.</td>
+      <td>Network devices.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>ICC</td>
+      <td>TCP</td>
+      <td>20/21</td>
+      <td>No</td>
+      <td>FTP port, which the configuration center uses to back up and restore
+        the device software and configuration file through FTP.</td>
+      <td>Network devices.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>ACL Management</td>
+      <td>TCP</td>
+      <td>23</td>
+      <td>No</td>
+      <td>Telnet port, which the resource management module, ACL management module,
+        and configuration center use to access the device through Telnet.</td>
+      <td>Network devices.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>Alarm Management</td>
+      <td>TCP</td>
+      <td>25</td>
+      <td>No</td>
+      <td>SMTP port, which the resource management module uses to send alarms through email.</td>
+      <td>SMTP Server</td>
+      <td>IMC master and subordinate servers.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>Resource Management</td>
+      <td>ICMP</td>
+      <td></td>
+      <td>No</td>
+      <td>ICMP port, which the resource management module uses to discover devices
+        and check the reachability of the devices.</td>
+      <td>Network devices.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>Resource Management</td>
+      <td>UDP</td>
+      <td>69</td>
+      <td>Yes</td>
+      <td>IMC-specific tftp daemon.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>Resource Management</td>
+      <td>TCP</td>
+      <td>80</td>
+      <td>Yes</td>
+      <td>Used to launch the Web network management system of the device.</td>
+      <td>Network devices.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>Virtual Resource Management</td>
+      <td>TCP</td>
+      <td>443</td>
+      <td>Yes</td>
+      <td>HTTPS port, which the virtual network management module uses to
+        obtain VMware virtual network data in SSL.</td>
+      <td></td>
+      <td>IMC master and subordinate servers.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>Syslog Management</td>
+      <td>UDP</td>
+      <td>514/515</td>
+      <td>Yes</td>
+      <td>IMC-specific syslog daemon.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td>Network devices.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>Resource Management</td>
+      <td>TCP/UDP</td>
+      <td>137</td>
+      <td>No</td>
+      <td>NetBIOS name resolution service port, used by the IMC resource
+        management module and terminal access module.</td>
+      <td></td>
+      <td>IMC master and subordinate servers.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>-</td>
+      <td>TCP</td>
+      <td>8080</td>
+      <td>Yes</td>
+      <td>IMC-specific Web server for HTTP protocol, which can be changed during installation.</td>
+      <td>IMC master server.</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>-</td>
+      <td>TCP</td>
+      <td>8443</td>
+      <td>Yes</td>
+      <td>IMC-specific Web server for HTTPS protocol, which can be changed during installation.</td>
+      <td>IMC master server</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>-</td>
+      <td>TCP</td>
+      <td>8800</td>
+      <td>No</td>
+      <td>IMC messaging gateway listening port.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td>Internal use.</td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>-</td>
+      <td>TCP</td>
+      <td>21190-21199</td>
+      <td>No</td>
+      <td>Java RMI communication port.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td>Internal use.</td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>-</td>
+      <td>TCP</td>
+      <td>1433</td>
+      <td>Yes</td>
+      <td>SQL Server database listening port (on Windows only).</td>
+      <td>SQL Server.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>-</td>
+      <td>TCP</td>
+      <td>3306</td>
+      <td>Yes</td>
+      <td>MySQL database listening port.</td>
+      <td>MySQL Server.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>-</td>
+      <td>TCP</td>
+      <td>1521</td>
+      <td>Yes</td>
+      <td>Oracle database listening port (on Linux only).</td>
+      <td>Oracle Server.</td>
+      <td>IMC master and subordinate servers.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>IMC Platform</td>
+      <td>DBMan</td>
+      <td>TCP</td>
+      <td>2810</td>
+      <td>No</td>
+      <td>Used for communication in DBMan.</td>
+      <td>DBMan.</td>
+      <td>DBMan.</td>
+      <td>Internal use.</td>
+    </tr>
+  </tbody>
+</table>
+<p><font color="#ff0000"><b>Note: </b><i>On Linux, you must run IMC with root privileges
+  to bind TCP/IP ports 69, 162, and 514.</i></font></p>
+<p><font color="#ff0000"><b>Note: </b><i>IMC cannot be bound to TCP/IP ports 69, 162,
+  and 514 if they are used by other SNMP, TFTP, or syslog applications.</i></font></p>
+<p><font color="#ff0000"><b>Note: </b><i>Make sure the firewall on each IMC server does not block programs javaw.exe and java.exe. The programs are located in directory \common\jre\bin (/common/jre/bin/java for Linux) of the IMC installation path.</i></font></p>
+<p>[ <a href="#toc">Table of Contents</a> ] </p>
+<hr>
+<h2><a name="MemoryAllocation">Memory Allocation</a></h2>
+<p>The amount of memory allocated to the IMC jserver can be adjusted by
+a script. The memory size should be tuned to make use of as much memory
+as required by your particular IMC server. Move to the "client\bin" (or "client/bin"
+on Linux OS) sub-directory of the original IMC installation directory (using the "cd"
+command), and use the <kbd>setmem.bat (or setmem.sh on Linux OS)</kbd> script.<br>For
+example, to allocate 1024 MB RAM, move to the "installation directory\client\bin" (or
+"installation directory/client/bin" on Linux OS) directory, and run the script:</p>
+<blockquote>
+  <p><kbd>setmem.bat </kbd><em><kbd>1024</kbd></em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Windows OS)</p>
+  <p><kbd>setmem.sh </kbd><em><kbd>1024</kbd></em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Linux OS)</p>
+</blockquote>
+<p>The default and maximum memory that can be allocated to the IMC jserver is listed below:</p>
+<table>
+  <thead>
+    <tr>
+      <th>OS Type</th>
+      <th>Default allocatable memory</th>
+      <th>Maximum allocatable memory</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Windows 32-bit</td>
+      <td>512 MB</td>
+      <td>1024 MB</td>
+    </tr>
+    <tr>
+      <td>Windows 64-bit</td>
+      <td>2048 MB</td>
+      <td>Depending on the physical memory</td>
+    </tr>
+    <tr>
+      <td>Linux 32-bit</td>
+      <td>512 MB</td>
+      <td>1280 MB</td>
+    </tr>
+    <tr>
+      <td>Linux 64-bit</td>
+      <td>2048 MB</td>
+      <td>Depending on the physical memory</td>
+    </tr>
+  </tbody>
+</table>
+<p>[ <a href="#toc">Table of Contents</a> ] </p>
+<hr>
+
+<h2><a name="knownProblems">Known Problems</a></h2>
+<p><font size="4"><b>Installation/Upgrade/Patch</b></font></p>
+<ul>
+  <li>For a correct installation, the installation path can contain letters, digits,
+    underlines, and spaces, but cannot contain other special characters.</li>
+  <li>If the system installed with IMC has insufficient memory, java overflow
+    might occur. To prevent this issue, install IMC in a 64-bit OS with sufficient memory.</li>
+  <li>During IMC platform upgrade from 7.1 (E0303L07), the system might display a message that directory iMC/deploy/jdk should be deleted manually. If you see the message, perform the following steps:
+	<ul><li>Start Windows Task Manager. </li>
+	<li>On the Processes tab, click the View menu and select Select Columns. Select the Command Line column and click OK.</li>
+	<li>Select the process named javaw.exe and click End Process.</li>
+	<li>In the dialog box that displays the upgrade error message, click Retry.</li></ul>
+  </li>
+</ul>
+<p><font size="4"><b>Other Problems</b></font></p>
+<ul>
+  <li>If the system is busy, the progress bar may be shown for a long time when you perform an operation.</li>
+  <li>IMC does not support the PoE features of Comware V3 devices.</li>
+  <li>Configuration Center does not support the software upgrade of IRF devices through SSH/SFTP. </li>
+  <li>Configuration Center does not support the software upgrade of old IRF2 devices  or a device with dual main boards.</li>
+  <li>If you configure a link aggregation across different units of IRF/IRF2 devices, the layer 2 topology
+    cannot display the links because the master device cannot collect complete information about links of
+    the subordinate members. Ensure you configure link aggregations only on the master device.</li>
+  <li>When you view the check result of a compliance check task, the system might display "Do you want to abort the script?"
+    if the check result contains too many devices and policies. Click <b>No</b> to continue the operation.</li>
+  <li>A prompt "Connection to the server disconnected. Check the connection and try again" is displayed after
+    the realtime performance monitoring runs for a while. Ignore the message and click <b>OK</b>.</li>
+  <li>If the device model is not correct for a third-party device, select <b>System &gt; Device Model</b> to edit the setting.</li>
+  <li>In an SNMP packet, the SNMP variables of the visible string type, the encoding mode must be GBK or ASCII.</li>
+  <li>If you upgrade your IMC to IMC PLAT 7.1, make sure you upgrade all components after the upgrade package is installed. Otherwise, IMC cannot start.</li>
+  <li>The device locations might change on the Google map topology in windows of different sizes or in full screen with different resolutions.</li>
+  <li>Discontinue monitoring the VM performance indices when the VM migrated to other hypervisor.</li>
+  <li>If you cannot open the Applet topology after upgrading Java to the latest version for the client, select Control Panel > Java > Security, and set the Security Level to Middle. </li>
+  <li>When you execute the backup.bat(.sh) script to back up IMC before upgrading IMC, only files are backed up, but the database is not backed up.</li>
+  <li>In the dashboard, the realtime performance monitoring data for memory utilization is displayed for CPU utilization.</li>
+  <li>In the converged topology, the status of a subview is always displayed as grey, which is displayed based on alarms of the highest level on the devices in the subview.</li>
+  <li>The following problems occur to the 3D chassis in the data center: the added virtual devices and trays cannot be displayed; the device locations in the 3D chassis are incorrect; after you configure the chassis, the newly added devices can be displayed only after the 3D chassis is reloaded.</l8i>
+  <li>In the Linux system, import device software fails when both IPv4 and IPv6 exist.</li>
+  <li>If IP addresses on two different network segments are configured on the IMC server, the non-default initial configuration file fails to be downloaded when a device with zero configurations is automatically deployed. </li>
+  <li>The SNMP test fails when the device location information is null.</li>
+    <li>A user creates a view on the Flex-based display tiling  page and adds performance trend widgets and widgets of other types for the  view. The user configures no parameters for all widgets. The view displays the  URL of the third-party control when the user accesses the view page for the first  time. The URL of the third-party control disappears and the performance trend  widgets become unavailable when the user accesses the view page for a second  time.</li>
+  <li>After VLAN interfaces are undeployed for tenants through RAM, the system prompts a configuration conflict if you deploy the same VLAN interfaces.</li>
+  <li>When VLANs are deployed to a device, access interface configurations fail. </li>
+  <li>After the Telnet or SSH parameters are modified for devices, the devices are not immediately synchronized in the ACL manager. </li>
+  <li>A Cisco low-end switch is added to the IMC platform with the SSH access method, Password authentication mode, and an empty password field. When an operator syncs or tests connectivity to the switch, the memory usage of the resource background process soars in seconds and the process eventually crashes.</li>
+  <li>Some of the E1POS interfaces of a device are not displayed on the device interface list, which is accessed by selecting POS Access > Interfaces on the device details page.</li>
+  <li>When a user logs on to IMC with the browser in windowed mode and then maximizes the browser, the page size cannot be adjusted. To solve this problem, refresh the page.</li>
+  <li>After the BIMS component is deployed on IMC, the V2 report still cannot be viewed. To solve this problem, delete the castor-0.9.9.1.jar in <b>iMC\client\repository\castor\jars\</b> folder, and copy the castor-1.2.jar from <b>iMC\client\web\apps\rptviewer\WEB-INF\lib\</b> folder to the <b>iMC\client\repository\castor\jars\</b> folder.</li>
+  <li>Chrome42+ disables NPAPI, including JRE. Because of this, IMC cannot open applet when using Chrome 42+.</li>
+  <li>There are more than 20 devices in a filter rule, fail to add the Syslog filter rule.</li>
+  <li>Add monitor again after the VM migrated to other hypervisor, discontinue monitoring the VM performance indices when the VM migrated  to other hypervisor.</li>
+  <li>This symptom occurs when use the converged topology feature. In the converged topology, the status of a subview is always displayed  as grey, which is displayed based on alarms of the highest level on the devices  in the subview.</li>
+  <li>Open data center topology, The following problems occur to the 3D chassis in the data center: the  added virtual devices and trays cannot be displayed; the device locations in  the 3D chassis are incorrect; after you configure the chassis, the newly added  devices can be displayed only after the 3D chassis is reloaded.</li>
+  <li>This symptom occurs when IP addresses on two different network segments  are configured on the iMC server. The non-default initial configuration file fails to be downloaded when a  device with zero configurations is automatically deployed.</li>
+  <li>An operator frequently switches between floors of a room, On a room topology, frequent switches between floors cause the windows  and doors to display incorrectly.</li>
+  <li>A user creates a view on the Flex-based display tiling page and adds  performance trend widgets and widgets of other types for the view. The user configures  no parameters for all widgets. The view displays the URL of the third-party control when the user  accesses the view page for the first time. The URL of the third-party control disappears  and the performance trend widgets are unavailable when the user accesses the  view page for the second time.</li>
+  <li>This symptom occurs if the target device is not synchronized after VLAN  interfaces are undeployed.After VLAN interfaces are undeployed for tenants through RAM, the system  prompts a configuration conflict if you deploy the same VLAN interfaces. </li>
+  <li>This symptom occurs if the Layer 2 aggregate interface configuration  changes made in the VLAN manager are not synchronized to devices.When VLANs are deployed to a device, access interface configurations  fail. </li>
+  <li>This symptom occurs when the Telnet or SSH parameters are modified for  devices. After the Telnet or SSH parameters are modified for devices, the devices  are not immediately synchronized in the ACL manager.</li>
+  <li>A Cisco low-end switch is added to the iMC platform with the SSH access  method, Password authentication mode, and an empty password field. An operator  tests connectivity to the switch, or sync the device to iMC platform.When an operator syncs or tests connectivity to a newly added Cisco  low-end switch, the memory usage of the resource background process soars in  seconds and the process eventually crashes.</li>
+  <li>An operator accesses the POS Access &gt; Interfaces page from the device  details page.&nbsp;Some of the E1POS interfaces of a  device are not displayed on the device interface list page.</li>
+  <li>A server automatic deployment plan contains a Windows OS template that  has more than three partitions with the Use free capacity option selected.iMC failed to deploy the OS template in a server automatic deployment  plan.</li>
+  <li>This symptom occurs when DHCP is configured to assign IP addresses on a  bare metal server and auto deployment is enabled in SSA.Auto deployment is not triggered for a bare metal server.</li>
+  <li>This symptom occurs when a user operates multiple servers at the same  time. For example, a user synchronizes server A and adds server B to SSA for  management at the same time.An error occurs when iMC obtains server information.</li>
+  <li>This symptom occurs when SSA monitors multiple servers.SSA collects data incorrectly.</li>
+  <li>This symptom occurs when the CAS version is earlier than E0209.No data is collected when VRM monitors CAS.</li>
+  <li>On the custom topology, device labels are modified to Korean character strings, and they become illegible after the topology is reloaded.</li>
+  <li>The default background of the H3C Web desktop edition is changed to the HPE image.</li>
+  <li>In HPE RSM edition, the HPE logo is not aligned to the upper-left corner on the login page.</li>
+</ul>
+<p>[ <a href="#toc">Table of Contents</a> ] </p>
+<hr>
+<p>Issued: November 2015<br>
+&copy Copyright 2015 Hewlett Packard Enterprise Development LP</p>
+</body>
+</html>

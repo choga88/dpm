@@ -1,0 +1,728 @@
+﻿=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2017.07.14 12:57:42 =~=~=~=~=~=~=~=~=~=~=~=
+[K]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ sd[Kduo -[K[K[K[K[Kudo -i
+sudo: unable to resolve host jaesanglee-5914
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# stack/os-170714
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# curl http;[K://tiny.cc/ook-hands/[K-on-2017-kr
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# wget [K[K[K[K[Kcurl http://tiny.cc/ook-hands-on-2017-kr[1Phttp://tiny.cc/ook-hands-on-2017-kr[1Phttp://tiny.cc/ook-hands-on-2017-kr[1Phttp://tiny.cc/ook-hands-on-2017-kr[1Phttp://tiny.cc/ook-hands-on-2017-kr[1Phttp://tiny.cc/ook-hands-on-2017-krwhttp://tiny.cc/ook-hands-on-2017-krghttp://tiny.cc/ook-hands-on-2017-krehttp://tiny.cc/ook-hands-on-2017-krthttp://tiny.cc/ook-hands-on-2017-kr http://tiny.cc/ook-hands-on-2017-kr
+--2017-07-14 12:58:28--  http://tiny.cc/ook-hands-on-2017-kr
+Resolving tiny.cc (tiny.cc)... 192.241.240.89
+Connecting to tiny.cc (tiny.cc)|192.241.240.89|:80... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://gist.github.com/Jaesang/8e45f3c1760c4158545aa60de04d57fe [following]
+--2017-07-14 12:58:28--  https://gist.github.com/Jaesang/8e45f3c1760c4158545aa60de04d57fe
+Resolving gist.github.com (gist.github.com)... 192.30.253.119, 192.30.253.118
+Connecting to gist.github.com (gist.github.com)|192.30.253.119|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘ook-hands-on-2017-kr’
+
+ook-hands-on-2017-kr                 [<=>                                                      ]       0  --.-KB/s               ook-hands-on-2017-kr                 [ <=>                                                     ]   5.95K  26.9KB/s               ook-hands-on-2017-kr                 [  <=>                                                    ]  31.36K  71.4KB/s               ook-hands-on-2017-kr                 [   <=>                                                   ]  42.82K  97.3KB/s    in 0.4s    
+
+2017-07-14 12:58:30 (97.3 KB/s) - ‘ook-hands-on-2017-kr’ saved [43849]
+
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# ls -al
+total 96
+drwx------  6 root root  4096 Jul 14 12:58 [0m[01;34m.[0m
+drwxr-xr-x 23 root root  4096 Jul 13 21:46 [01;34m..[0m
+-rw-------  1 root root  2308 Jul 13 13:54 .bash_history
+-rw-r--r--  1 root root  3106 Oct 23  2015 .bashrc
+drwx------  2 root root  4096 Jan 31 17:06 [01;34m.cache[0m
+-rw-r--r--  1 root root     0 Jul 11 14:30 .cloud-locale-test.skip
+drwxr-xr-x  4 root root  4096 Jul 11 21:54 [01;34m.kube[0m
+-rw-r--r--  1 root root 43849 Jul 14 12:58 ook-hands-on-2017-kr
+-rw-r--r--  1 root root   148 Aug 18  2015 .profile
+-rw-------  1 root root  1024 Jul 12 18:28 .rnd
+drwx------  2 root root  4096 Jul 11 14:29 [01;34m.ssh[0m
+drwxr-xr-x  2 root root  4096 Feb  7 13:52 [01;34m.vim[0m
+-rw-------  1 root root  4955 Jul 13 13:25 .viminfo
+-rw-r--r--  1 root root   172 Jul 14 12:58 .wget-hsts
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# file ook-hands-on-2017-kr 
+ook-hands-on-2017-kr: HTML document, UTF-8 Unicode text, with very long lines
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# vi ook-hands-on-2017-kr 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;44r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[44;1H"ook-hands-on-2017-kr" 625L, 43849C[>c[7;1H<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">[21;3H<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-2d2d4c150f7000385741c6b992b302689ecd172246c66[22;1H428904e0813be9bceca6.css" media="all" rel="stylesheet" />
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-0522ae8d3b3bdc841d2f91f90efd5f1fd9040d910905674cc[24;1Hd134ced43a6dfea6.css" media="all" rel="stylesheet" />[27;3H<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-cfab053e93f0e27f4c63d4ff6b7957bd25f711667fe678e7477[28;1Hf8a4d88c47b38d.css" media="all" rel="stylesheet" />[31;3H<meta name="viewport" content="width=device-width">
+
+  <title>test · GitHub</title>
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://gist.github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">[39;5H<meta content="https://avatars1.githubusercontent.com/u/885169?v=4&amp;s=400" property="og:image" /><meta content="Gist" propee[40;1Hrty="og:site_name" /><meta content="object" property="og:type" /><meta content="test" property="og:title" /><meta content="https://[41;1H/gist.github.com/Jaesang/8e45f3c1760c4158545aa60de04d57fe" property="og:url" /><meta content="test" property="og:description" />
+
+  <link rel="assets" href="https://assets-cdn.github.com/">[44;113H1,0-1[9CTop[1;1H[?12l[?25h[?25l[44;113H2[2;1H[?12l[?25h[?25l[44;113H3[3;1H[?12l[?25h[?25l[44;113H4[4;1H[?12l[?25h[?25l[44;113H5[5;1H[?12l[?25h[?25l[44;113H6[6;1H[?12l[?25h[?25l[44;113H7,1  [7;1H[?12l[?25h[?25l[44;113H8[8;1H[?12l[?25h[?25l[44;113H9[9;1H[?12l[?25h[?25l[44;113H10,1[10;1H[?12l[?25h[?25l[44;114H1[11;1H[?12l[?25h[?25l[44;114H2[12;1H[?12l[?25h[?25l[44;114H3[13;1H[?12l[?25h[?25l[44;114H4[14;1H[?12l[?25h[?25l[44;114H5[15;1H[?12l[?25h[?25l[44;114H6[16;1H[?12l[?25h[?25l[44;114H7[17;1H[?12l[?25h[?25l[44;114H8,0-1[18;1H[?12l[?25h[?25l[44;114H9[19;1H[?12l[?25h[?25l[44;113H20[20;1H[?12l[?25h[?25l[44;114H1,1  [21;1H[?12l[?25h[?25l[44;114H2[23;1H[?12l[?25h[?25l[44;114H3[25;1H[?12l[?25h[?25l[44;114H4[26;1H[?12l[?25h[?25l[44;114H5[27;1H[?12l[?25h[?25l[44;114H6[29;1H[?12l[?25h[?25l[44;114H7,0-1[30;1H[?12l[?25h[?25l[44;114H8,1  [31;1H[?12l[?25h[?25l[44;114H9[32;1H[?12l[?25h[?25l[44;113H30[33;1H[?12l[?25h[?25l[44;114H1[34;1H[?12l[?25h[?25l[44;114H2[35;1H[?12l[?25h[?25l[44;114H3[36;1H[?12l[?25h[?25l[44;114H4,0-1[37;1H[?12l[?25h[?25l[44;114H5,1  [38;1H[?12l[?25h[?25l[44;114H6[39;1H[?12l[?25h[?25l[44;114H7,0-1[42;1H[?12l[?25h[?25l[44;114H8,1  [43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;1H[K[44;113H39,1[11C0%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<meta name="pjax-timeout" content="1000">[44;113H[K[44;113H40,1[11C0%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H41,1[11C0%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<meta name="request-id" content="C08A:022A:83EFA1:DEE63E:59684164" data-pjax-transient>[44;113H[K[44;113H42,1[11C0%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H43,1[11C0%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H44,0-1[9C1%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<meta name="selected-link" value="gist_code" data-pjax-transient>[44;113H[K[44;113H45,1[11C1%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H46,0-1[9C1%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">[44;113H[K[44;113H47,1[11C1%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">[44;113H[K[44;113H48,1[11C1%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<meta name="google-analytics" content="UA-3769691-4">[44;113H[K[44;113H49,1[11C1%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H50,0-1[9C2%[43;1H[?12l[?25h[?25l[1;43r[1;1H[4M[1;44r[40;1H<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="gist" name="octolytics-app-id" /><meta content="htt[41;1Htps://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" /><meta content="C08A:022A:83EFA1:DEE63E::[42;1H59684164" name="octolytics-dimension-request_id" /><meta content="iad" name="octolytics-dimension-region_edge" /><meta content="iaa[43;1Hd" name="octolytics-dimension-region_render" />[44;113H[K[44;113H51,1[11C2%[40;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H<meta content="/&lt;user-name&gt;/&lt;gist-id&gt;" data-pjax-transient="true" name="analytics-location" />[44;113H[K[44;113H52,1[11C2%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H53,0-1[9C3%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H54,0-1[9C3%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H55,0-1[9C3%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[43;3H<meta class="js-ga-set" name="dimension1" content="Logged Out">[44;113H[K[44;113H56,0-1[9C3%[42;1H[?12l[?25h[?25l[44;114H7,1  [43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[44;113H[K[44;113H58,0-1[9C3%[42;1H[?12l[?25h[?25l[44;114H9[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H60,0-1[9C3%[43;1H[?12l[?25h[?25l[1;43r[1;1H[4M[1;44r[40;5H<meta content="true" name="octolytics-dimension-public" /><meta content="60158377" name="octolytics-dimension-gist_id" /><metaa[41;1H content="8e45f3c1760c4158545aa60de04d57fe" name="octolytics-dimension-gist_name" /><meta content="false" name="octolytics-dimensii[42;1Hon-anonymous" /><meta content="885169" name="octolytics-dimension-owner_id" /><meta content="Jaesang" name="octolytics-dimension-oo[43;1Hwner_login" /><meta content="false" name="octolytics-dimension-forked" />[44;113H[K[44;113H61,1[11C4%[40;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H62,0-1[9C4%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<meta class="js-ga-set" name="dimension5" content="public">[44;113H[K[44;113H63,1[11C4%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<meta class="js-ga-set" name="dimension6" content="owned">[44;113H[K[44;113H64,1[11C4%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<meta class="js-ga-set" name="dimension7" content="markdown">[44;113H[K[44;113H65,1[11C5%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H66,0-1[9C5%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H67,0-1[9C5%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H<meta name="hostname" content="gist.github.com">[44;113H[K[44;113H68,1[11C5%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<meta name="user-login" content="">[44;113H[K[44;113H69,1[11C5%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H70,0-1[9C5%[43;1H[?12l[?25h[?25l[1;43r[1;1H[3M[1;44r[41;7H<meta name="expected-hostname" content="gist.github.com">
+    <meta name="js-proxy-site-detection-payload" content="YzEzOWUxNzE1YTdhZTQ3YjFhOTI5YTU0ODkyNzEwMjE0MTQwM2E5MzUxNmI1MWY3YjVmN2Ixx[43;1HOTUyODE2ZWVlZXx7InJlbW90ZV9hZGRyZXNzIjoiMTE1LjY4LjIyNy43NCIsInJlcXVlc3RfaWQiOiJDMDhBOjAyMkE6ODNFRkExOkRFRTYzRTo1OTY4NDE2NCIsInRpbW[42;1H[1m[34m@                                                                                                                                 [43;1H@                                                                                                                                 [m[44;113H[K[44;113H71,1[11C6%[41;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[41;1H    <meta name="js-proxy-site-detection-payload" content="YzEzOWUxNzE1YTdhZTQ3YjFhOTI5YTU0ODkyNzEwMjE0MTQwM2E5MzUxNmI1MWY3YjVmN2Ixx[42;1HOTUyODE2ZWVlZXx7InJlbW90ZV9hZGRyZXNzIjoiMTE1LjY4LjIyNy43NCIsInJlcXVlc3RfaWQiOiJDMDhBOjAyMkE6ODNFRkExOkRFRTYzRTo1OTY4NDE2NCIsInRpbWW[43;1HVzdGFtcCI6MTUwMDAwNDcwOSwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">[44;113H[K[44;113H72,1[11C6%[41;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H73,0-1[9C6%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H74,0-1[9C6%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<meta name="html-safe-nonce" content="80127efb1af8c614262056be0d47d93ae922155a">[44;113H[K[44;113H75,1[11C6%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H76,0-1[9C6%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<meta http-equiv="x-pjax-version" content="175e789258843bb35d9544367c73edfe">[44;113H[K[44;113H77,1[11C7%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H78,1[11C7%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H79,0-1[9C7%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H<link href="/Jaesang.atom" rel="alternate" title="atom" type="application/atom+xml">[44;113H[K[44;113H80,1[11C7%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H81,1[11C7%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;3H<link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/gist-67dd5139d22e4e9921ef362b5458f51e5973a20db04a54c9d77[43;1H4116748f852917.css" media="all" rel="stylesheet" />[44;113H[K[44;113H82,1[11C8%[42;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H83,0-1[9C8%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H84,0-1[9C8%[43;1H[?12l[?25h[?25l[1;43r[1;1H[4M[1;44r[42;3H<meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">[44;113H[K[44;113H85,0-1[9C8%[40;1H[?12l[?25h[?25l[44;114H6[41;1H[?12l[?25h[?25l[44;114H7,1  [42;1H[?12l[?25h[?25l[44;114H8,0-1[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">[44;113H[K[44;113H89,1[11C8%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H90,0-1[9C9%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">[44;113H[K[44;113H91,1[11C9%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">[44;113H[K[44;113H92,1[11C9%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H93,0-1[9C9%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H<meta name="theme-color" content="#1e2327">[44;113H[K[44;113H94,1[11C9%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H95,0-1[9C9%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H96,0-1[8C10%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H97,0-1[8C10%[43;1H[?12l[?25h[?25l[1;43r[1;1H[4M[1;44r[40;3H</head>
+
+  <body class="logged-out env-production">[44;113H[K[44;113H98,1[10C10%[40;1H[?12l[?25h[?25l[44;114H9,0-1[41;1H[?12l[?25h[?25l[44;113H100,1 [42;1H[?12l[?25h[?25l[44;115H1[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H102,0-1[7C10%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H103,0-1[7C10%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H104,0-1[7C10%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<div class="position-relative js-header-wrapper ">[44;113H[K[44;113H105,1[9C11%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<a href="#start-of-content" tabindex="1" class="px-2 py-4 show-on-focus js-skip-to-content">Skip to content</a>[44;113H[K[44;113H106,1[9C11%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>[44;113H[K[44;113H107,1[9C11%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H108,0-1[7C11%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H109,1[9C11%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H110,1[9C11%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H111,1[9C12%[43;1H[?12l[?25h[?25l[1;43r[1;1H[3M[1;44r[44;113H[K[44;113H112,0-1[7C12%[41;1H[?12l[?25h[?25l[44;115H3[42;1H[?12l[?25h[?25l[44;115H4[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;9H<div class="header gist-header header-logged-out" role="banner">[44;113H[K[44;113H115,1[9C12%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<div class="container clearfix">[44;113H[K[44;113H116,1[9C12%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H117,0-1[7C12%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<a href="/" aria-label="Gist Homepage" class="header-logo-wordmark" data-hotkey="g d">[44;113H[K[44;113H118,1[9C13%[43;1H[?12l[?25h[?25l[1;43r[1;1H[16M[1;44r[28;7H<svg aria-hidden="true" class="octicon octicon-logo-github" height="28" version="1.1" viewBox="0 0 45 16" width="78"><path ff[29;1Hill-rule="evenodd" d="M18.53 12.03h-.02c.009 0 .015.01.024.011h.006l-.01-.01zm.004.011c-.093.001-.327.05-.574.05-.78 0-1.05-.36-1..[30;1H05-.83V8.13h1.59c.09 0 .16-.08.16-.19v-1.7c0-.09-.08-.17-.16-.17h-1.59V3.96c0-.08-.05-.13-.14-.13h-2.16c-.09 0-.14.05-.14.13v2.17ss[31;1H-1.09.27-1.16.28c-.08.02-.13.09-.13.17v1.36c0 .11.08.19.17.19h1.11v3.28c0 2.44 1.7 2.69 2.86 2.69.53 0 1.17-.17 1.27-.22.06-.02.099[32;1H-.09.09-.16v-1.5a.177.177 0 0 0-.146-.18zm23.696-2.2c0-1.81-.73-2.05-1.5-1.97-.6.04-1.08.34-1.08.34v3.52s.49.34 1.22.36c1.03.03 1..[33;1H36-.34 1.36-2.25zm2.43-.16c0 3.43-1.11 4.41-3.05 4.41-1.64 0-2.52-.83-2.52-.83s-.04.46-.09.52c-.03.06-.08.08-.14.08h-1.48c-.1 0-.11[34;1H9-.08-.19-.17l.02-11.11c0-.09.08-.17.17-.17h2.13c.09 0 .17.08.17.17v3.77s.82-.53 2.02-.53l-.01-.02c1.2 0 2.97.45 2.97 3.88zm-8.72--[35;1H3.61H33.84c-.11 0-.17.08-.17.19v5.44s-.55.39-1.3.39-.97-.34-.97-1.09V6.25c0-.09-.08-.17-.17-.17h-2.14c-.09 0-.17.08-.17.17v5.11c0  [36;1H2.2 1.23 2.75 2.92 2.75 1.39 0 2.52-.77 2.52-.77s.05.39.08.45c.02.05.09.09.16.09h1.34c.11 0 .17-.08.17-.17l.02-7.47c0-.09-.08-.17--[37;1H.19-.17zm-23.7-.01h-2.13c-.09 0-.17.09-.17.2v7.34c0 .2.13.27.3.27h1.92c.2 0 .25-.09.25-.27V6.23c0-.09-.08-.17-.17-.17zm-1.05-3.38cc[38;1H-.77 0-1.38.61-1.38 1.38 0 .77.61 1.38 1.38 1.38.75 0 1.36-.61 1.36-1.38 0-.77-.61-1.38-1.36-1.38zm16.49-.25h-2.11c-.09 0-.17.08-..[39;1H17.17v4.09h-3.31V2.6c0-.09-.08-.17-.17-.17h-2.13c-.09 0-.17.08-.17.17v11.11c0 .09.09.17.17.17h2.13c.09 0 .17-.08.17-.17V8.96h3.31ll[40;1H-.02 4.75c0 .09.08.17.17.17h2.13c.09 0 .17-.08.17-.17V2.6c0-.09-.08-.17-.17-.17zM8.81 7.35v5.74c0 .04-.01.11-.06.13 0 0-1.25.89-3..[41;1H31.89-2.49 0-5.44-.78-5.44-5.92S2.58 1.99 5.1 2c2.18 0 3.06.49 3.2.58.04.05.06.09.06.14L7.94 4.5c0 .09-.09.2-.2.17-.36-.11-.9-.33--[42;1H2.17-.33-1.47 0-3.05.42-3.05 3.73s1.5 3.7 2.58 3.7c.92 0 1.25-.11 1.25-.11v-2.3H4.88c-.11 0-.19-.08-.19-.17V7.35c0-.09.08-.17.19-..[43;1H17h3.74c.11 0 .19.08.19.17z"/></svg>[44;113H[K[44;113H119,1[9C15%[28;1H[?12l[?25h[?25l[1;43r[1;1H[9M[1;44r[35;7H<svg aria-hidden="true" class="octicon octicon-logo-gist" height="28" version="1.1" viewBox="0 0 25 16" width="40"><path fill[36;1Hl-rule="evenodd" d="M4.7 8.73h2.45v4.02c-.55.27-1.64.34-2.53.34-2.56 0-3.47-2.2-3.47-5.05 0-2.85.91-5.06 3.48-5.06 1.28 0 2.06.23  [37;1H3.28.73V2.66C7.27 2.33 6.25 2 4.63 2 1.13 2 0 4.69 0 8.03c0 3.34 1.11 6.03 4.63 6.03 1.64 0 2.81-.27 3.59-.64V7.73H4.7v1zm6.39 3.77[38;1H2V6.06h-1.05v6.28c0 1.25.58 1.72 1.72 1.72v-.89c-.48 0-.67-.16-.67-.7v-.02zm.25-8.72c0-.44-.33-.78-.78-.78s-.77.34-.77.78.33.78.777[39;1H.78.78-.34.78-.78zm4.34 5.69c-1.5-.13-1.78-.48-1.78-1.17 0-.77.33-1.34 1.88-1.34 1.05 0 1.66.16 2.27.36v-.94c-.69-.3-1.52-.39-2.255[40;1H-.39-2.2 0-2.92 1.2-2.92 2.31 0 1.08.47 1.88 2.73 2.08 1.55.13 1.77.63 1.77 1.34 0 .73-.44 1.42-2.06 1.42-1.11 0-1.86-.19-2.33-.366[41;1Hv.94c.5.2 1.58.39 2.33.39 2.38 0 3.14-1.2 3.14-2.41 0-1.28-.53-2.03-2.75-2.23h-.03zm8.58-2.47v-.86h-2.42v-2.5l-1.08.31v2.11l-1.56..[42;1H44v.48h1.56v5c0 1.53 1.19 2.13 2.5 2.13.19 0 .52-.02.69-.05v-.89c-.19.03-.41.03-.61.03-.97 0-1.5-.39-1.5-1.34V6.94h2.42v.02-.01z"//[43;1H></svg>[44;113H[K[44;113H120,1[9C16%[35;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</a>[44;113H[K[44;113H121,1[9C16%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<div class="site-search js-site-search" role="search">[44;113H[K[44;113H122,1[9C16%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;9H<div class="header-search" role="search">[44;113H[K[44;113H123,1[9C17%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H124,0-1[7C17%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;1H<!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/search" class="position-relative" methh[43;1Hod="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>[44;113H[K[44;113H125,1[9C17%[42;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<label class="header-search-wrapper form-control js-chromeless-input-container">[44;113H[K[44;113H126,1[9C17%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<input type="text"[44;113H[K[44;113H127,1[9C17%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7Hclass="form-control js-site-search-focus header-search-input"[44;113H[K[44;113H128,1[9C17%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7Hdata-hotkey="s"[44;113H[K[44;113H129,1[9C18%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7Hname="q"[44;113H[K[44;113H130,1[9C18%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7Hplaceholder="Search…"[44;113H[K[44;113H131,1[9C18%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7Htabindex="1"[44;113H[K[44;113H132,1[9C18%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7Hautocorrect="off"[44;113H[K[44;113H133,1[9C18%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7Hautocomplete="off"[44;113H[K[44;113H134,1[9C18%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7Hautocapitalize="off">[44;113H[K[44;113H135,1[9C19%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H</label>[44;113H[K[44;113H136,1[9C19%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H137,0-1[7C19%[43;1H[?12l[?25h[?25l[1;43r[1;1H[16M[1;44r[28;1H</form></div>[30;5H</div>
+    <ul class="header-nav float-left" role="navigation">[32;7H<li class="header-nav-item">[33;9H<a href="/discover" class="header-nav-link" data-ga-click="Header, go to all gists, text:all gists">All gists</a>[34;7H</li>[36;7H<li class="header-nav-item">[37;9H<a href="https://github.com" class="header-nav-link" data-ga-click="Header, go to GitHub, text:GitHub">GitHub</a>[38;7H</li>
+    </ul>[41;7H<div class="header-actions" role="navigation">[42;11H<a href="/join?source=header-gist" class="btn btn-primary" data-ga-click="Header, sign up">Sign up for a GitHub account<<[43;1H/a>[44;113H[K[44;113H138,1[9C20%[28;1H[?12l[?25h[?25l[44;115H9,0-1[29;1H[?12l[?25h[?25l[44;114H40,1  [30;1H[?12l[?25h[?25l[44;115H1[31;1H[?12l[?25h[?25l[44;115H2[32;1H[?12l[?25h[?25l[44;115H3[33;1H[?12l[?25h[?25l[44;115H4[34;1H[?12l[?25h[?25l[44;115H5,0-1[35;1H[?12l[?25h[?25l[44;115H6,1  [36;1H[?12l[?25h[?25l[44;115H7[37;1H[?12l[?25h[?25l[44;115H8[38;1H[?12l[?25h[?25l[44;115H9[39;1H[?12l[?25h[?25l[44;114H50,0-1[40;1H[?12l[?25h[?25l[44;115H1,1  [41;1H[?12l[?25h[?25l[44;115H2[42;1H[?12l[?25h[?25l[1;43r[1;1H[9M[1;44r[35;9H<a href="https://gist.github.com/auth/github?return_to=gist" class="btn" data-ga-click="Header, sign in">Sign in</a>[36;7H</div>
+  </div>
+</div>[42;3H</div>[44;113H[K[44;113H153,1[9C20%[35;1H[?12l[?25h[?25l[44;115H4[36;1H[?12l[?25h[?25l[44;115H5[37;1H[?12l[?25h[?25l[44;115H6[38;1H[?12l[?25h[?25l[44;115H7,0-1[39;1H[?12l[?25h[?25l[44;115H8[40;1H[?12l[?25h[?25l[44;115H9[41;1H[?12l[?25h[?25l[44;114H60,1  [42;1H[?12l[?25h[?25l[44;115H1,0-1[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<div id="start-of-content" class="show-on-focus"></div>[44;113H[K[44;113H162,1[9C20%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H163,0-1[7C20%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<div id="js-flash-container">[44;113H[K[44;113H164,1[9C21%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</div>[44;113H[K[44;113H165,1[9C21%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[44;113H[K[44;113H166,0-1[7C21%[42;1H[?12l[?25h[?25l[44;115H7[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H168,0-1[7C21%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<div role="main">[44;113H[K[44;113H169,1[9C21%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;9H<div itemscope itemtype="http://schema.org/Code">[44;113H[K[44;113H170,1[9C21%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<div id="gist-pjax-container" class="gist-content-wrapper" data-pjax-container>[44;113H[K[44;113H171,1[9C22%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H172,1[9C22%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H173,0-1[7C22%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H174,0-1[7C22%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<div class="gist-detail-intro gist-banner">[44;113H[K[44;113H175,1[9C22%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<div class="container">[44;113H[K[44;113H176,1[9C22%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H<a href="/" class="btn btn-outline float-right">Create a gist now</a>[44;113H[K[44;113H177,1[9C23%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H<p class="lead">[44;113H[K[44;113H178,1[9C23%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;9HInstantly share code, notes, and snippets.[44;113H[K[44;113H179,1[9C23%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H</p>[44;113H[K[44;113H180,1[9C23%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H</div>[44;113H[K[44;113H181,1[9C23%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H</div>[44;113H[K[44;113H182,1[9C24%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H183,0-1[7C24%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H184,0-1[7C24%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H<div class="gisthead pagehead repohead instapaper_ignore readability-menu experiment-repo-nav mb-4">[44;113H[K[44;113H185,1[9C24%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<div class="container">[44;113H[K[44;113H186,1[9C24%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H187,1[9C24%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H188,1[9C25%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H<div class="container repohead-details-container">[44;113H[K[44;113H189,1[9C25%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H190,0-1[7C25%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<ul class="pagehead-actions">[44;113H[K[44;113H191,1[9C25%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H192,0-1[7C25%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H193,0-1[7C25%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;5H<li>[43;9H<a href="/login?return_to=https%3A%2F%2Fgist.github.com%2FJaesang%2F8e45f3c1760c4158545aa60de04d57fe" aria-label="You must[43;1H[1m[34m@                                                                                                                                 [m[44;113H[K[44;113H194,1[9C26%[42;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[42;1H        <a href="/login?return_to=https%3A%2F%2Fgist.github.com%2FJaesang%2F8e45f3c1760c4158545aa60de04d57fe" aria-label="You mustt[43;1H be signed in to star a gist" class="btn btn-sm btn-with-count tooltipped tooltipped-n" rel="nofollow">[44;113H[K[44;113H195,1[9C26%[42;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;5H<svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule==[43;1H"evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>[44;113H[K[44;113H196,1[9C26%[42;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5HStar[44;113H[K[44;113H197,1[9C26%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</a>[44;113H[K[44;113H198,1[9C26%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<a href="/Jaesang/8e45f3c1760c4158545aa60de04d57fe/stargazers" aria-label="1 user starred this gist" class="social-count">[44;113H[K[44;113H199,1[9C27%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H1[44;113H[K[44;113H200,1[9C27%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</a>[44;113H[K[44;113H201,1[9C27%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H</li>[44;113H[K[44;113H202,1[9C27%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H203,0-1[7C27%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H<li>[44;113H[K[44;113H204,1[9C27%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;11H<a href="/login?return_to=https%3A%2F%2Fgist.github.com%2FJaesang%2F8e45f3c1760c4158545aa60de04d57fe" aria-label="You muu[43;1Hst be signed in to fork a gist" class="btn btn-sm btn-with-count tooltipped tooltipped-n" rel="nofollow">[44;113H[K[44;113H205,1[9C28%[42;1H[?12l[?25h[?25l[1;43r[1;1H[5M[1;44r[39;5H<svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill[40;1Hl-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.9933[41;1H 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 00[42;1H 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zz[43;1Hm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>[44;113H[K[44;113H206,1[9C28%[39;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5HFork[44;113H[K[44;113H207,1[9C29%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</a>[44;113H[K[44;113H208,1[9C29%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<a href="/Jaesang/8e45f3c1760c4158545aa60de04d57fe/forks" aria-label="0 users forked this gist" class="social-count">[44;113H[K[44;113H209,1[9C29%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H0[44;113H[K[44;113H210,1[9C29%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</a>[44;113H[K[44;113H211,1[9C29%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H</li>[44;113H[K[44;113H212,1[9C29%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H213,0-1[7C30%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H</ul>[44;113H[K[44;113H214,1[9C30%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H215,0-1[7C30%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<h1 class="public css-truncate">[44;113H[K[44;113H216,1[9C30%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;5H<img alt="@Jaesang" class="avatar gist-avatar" height="26" src="https://avatars5.githubusercontent.com/u/885169?v=4&amp;s=52"  [43;1Hwidth="26" />[44;113H[K[44;113H217,1[9C30%[42;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<span class="author"><a href="/Jaesang" class="url fn" rel="author"><span itemprop="author">Jaesang</span></a></span><!--[44;113H[K[44;113H218,1[9C31%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;9H--><span class="path-divider">/</span><!--[44;113H[K[44;113H219,1[9C31%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;9H--><strong itemprop="name" class="gist-header-title css-truncate-target"><a href="/Jaesang/8e45f3c1760c4158545aa60de04d57ff[43;1He">hands-on.md</a></strong>[44;113H[K[44;113H220,1[9C31%[42;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H221,0-1[7C31%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<div class="gist-timestamp">Last active <time-ago datetime="2017-07-14T03:53:42Z">Jul 14, 2017</time-ago></div>[44;113H[K[44;113H222,1[9C31%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H</h1>[44;113H[K[44;113H223,1[9C31%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</div>[44;113H[K[44;113H224,1[9C32%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H225,0-1[7C32%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H<div class="container gist-file-navigation">[44;113H[K[44;113H226,1[9C32%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H<div class="float-right file-navigation-options" data-multiple>[44;113H[K[44;113H227,1[9C32%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H228,0-1[7C32%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;5H<div class="file-navigation-option">
+  <input type="hidden" name="protocol_type" value="clone">[44;113H[K[44;113H229,1[9C33%[42;1H[?12l[?25h[?25l[44;114H30[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[43;3H<div class="select-menu js-menu-container js-select-menu">[44;113H[K[44;113H231,0-1[7C33%[42;1H[?12l[?25h[?25l[44;115H2,1  [43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<div class="input-group js-select-button js-zeroclipboard-container">[44;113H[K[44;113H233,1[9C33%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H<div class="input-group-button">[44;113H[K[44;113H234,1[9C33%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;3H<button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone Embed, location:repoo[43;1H overview" aria-expanded="false" aria-haspopup="true">[44;113H[K[44;113H235,1[9C33%[42;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5HEmbed[44;113H[K[44;113H236,1[9C34%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H</button>[44;113H[K[44;113H237,1[9C34%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</div>[44;113H[K[44;113H238,1[9C34%[43;1H[?12l[?25h[?25l[1;43r[1;1H[3M[1;44r[41;1H<input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="&lt;script src=&quot;;[42;1Hhttps://gist.github.com/Jaesang/8e45f3c1760c4158545aa60de04d57fe.js&quot;&gt;&lt;/script&gt;" aria-label="Clone this repository att[43;1H &lt;script src=&quot;https://gist.github.com/Jaesang/8e45f3c1760c4158545aa60de04d57fe.js&quot;&gt;&lt;/script&gt;" readonly>[44;113H[K[44;113H239,1[9C34%[41;1H[?12l[?25h[?25l[1;43r[1;1H[5M[1;44r[39;1H<div class="input-group-button">
+  <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copp[41;1Hied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14  [42;1H16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2vv[43;1H1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 1[40;1H[1m[34m@                                                                                                                                 [41;1H@                                                                                                                                 [42;1H@                                                                                                                                 [43;1H@                                                                                                                                 [m[44;113H[K[44;113H240,1[9C34%[39;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[38;1H  <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copp[39;1Hied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14  [40;1H16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2vv[41;1H1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 11[42;1H .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg></bb[43;1Hutton>[44;113H[K[44;113H241,1[9C35%[38;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</div>[44;113H[K[44;113H242,1[9C35%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H243,0-1[7C35%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H</div>[44;113H[K[44;113H244,1[9C35%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H245,0-1[7C35%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<div class="select-menu-modal-holder">[44;113H[K[44;113H246,1[9C35%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H<div class="select-menu-modal js-menu-content">[44;113H[K[44;113H247,1[9C36%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;9H<div class="select-menu-header">[44;113H[K[44;113H248,1[9C36%[43;1H[?12l[?25h[?25l[1;43r[1;1H[3M[1;44r[41;11H<svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16""[42;1H width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52ll[43;1H3.75-3.75 1.48 1.48z"/></svg>[44;113H[K[44;113H249,1[9C36%[41;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;11H<span class="select-menu-title">What would you like to do?</span>[44;113H[K[44;113H250,1[9C36%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;9H</div>[44;113H[K[44;113H251,1[9C36%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[43;9H<div class="select-menu-list js-navigation-container" role="menu">[44;113H[K[44;113H252,0-1[7C37%[42;1H[?12l[?25h[?25l[44;115H3,1  [43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;13H<div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">[44;113H[K[44;113H254,1[9C37%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;15H<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 11[43;1H2 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>[44;113H[K[44;113H255,1[9C37%[42;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;15H<div class="select-menu-item-text">[44;113H[K[44;113H256,1[9C37%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H<input type="radio" name="protocol_selector" value="embed" checked>[44;113H[K[44;113H257,1[9C37%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H<span class="select-menu-item-heading">[44;113H[K[44;113H258,1[9C38%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H259,1[9C38%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;19HEmbed[44;113H[K[44;113H260,1[9C38%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H</span>[44;113H[K[44;113H261,1[9C38%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;19H<span class="description">[44;113H[K[44;113H262,1[9C38%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;21HEmbed this gist in your website.[44;113H[K[44;113H263,1[9C38%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;19H</span>[44;113H[K[44;113H264,1[9C39%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H<span class="js-select-button-text hidden-select-button-text">[44;113H[K[44;113H265,1[9C39%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;19H<div class="input-group-button">[44;113H[K[44;113H266,1[9C39%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;3H<button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone Embed, location:repoo[43;1H overview" aria-expanded="false" aria-haspopup="true">[44;113H[K[44;113H267,1[9C39%[42;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5HEmbed[44;113H[K[44;113H268,1[9C39%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H</button>[44;113H[K[44;113H269,1[9C39%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</div>[44;113H[K[44;113H270,1[9C40%[43;1H[?12l[?25h[?25l[1;43r[1;1H[3M[1;44r[41;1H<input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="&lt;script src=&quot;;[42;1Hhttps://gist.github.com/Jaesang/8e45f3c1760c4158545aa60de04d57fe.js&quot;&gt;&lt;/script&gt;" aria-label="Clone this repository att[43;1H &lt;script src=&quot;https://gist.github.com/Jaesang/8e45f3c1760c4158545aa60de04d57fe.js&quot;&gt;&lt;/script&gt;" readonly>[44;113H[K[44;113H271,1[9C40%[41;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H<div class="input-group-button">[44;113H[K[44;113H272,1[9C40%[43;1H[?12l[?25h[?25l[1;43r[1;1H[6M[1;44r[38;3H<button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copp[39;1Hied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14  [40;1H16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2vv[41;1H1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 11[42;1H .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg></bb[43;1Hutton>[44;113H[K[44;113H273,1[9C40%[38;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</div>[44;113H[K[44;113H274,1[9C40%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H275,0-1[7C40%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H</span>[44;113H[K[44;113H276,1[9C41%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;15H</div>[44;113H[K[44;113H277,1[9C41%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;13H</div>[44;113H[K[44;113H278,1[9C41%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;13H<div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">[44;113H[K[44;113H279,1[9C41%[43;1H[?12l[?25h[?25l[1;43r[1;1H[4M[1;44r[40;15H<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 11[41;1H2 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>[42;15H<div class="select-menu-item-text">[43;17H<input type="radio" name="protocol_selector" value="share" >[44;113H[K[44;113H280,1[9C42%[40;1H[?12l[?25h[?25l[44;115H1[42;1H[?12l[?25h[?25l[44;115H2[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H<span class="select-menu-item-heading">[44;113H[K[44;113H283,1[9C42%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H284,1[9C42%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;19HShare[44;113H[K[44;113H285,1[9C42%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H</span>[44;113H[K[44;113H286,1[9C42%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;19H<span class="description">[44;113H[K[44;113H287,1[9C42%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;21HCopy sharable URL for this gist.[43;19H</span>[44;113H[K[44;113H288,1[9C43%[42;1H[?12l[?25h[?25l[44;115H9[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H<span class="js-select-button-text hidden-select-button-text">[44;113H[K[44;113H290,1[9C43%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;19H<div class="input-group-button">[44;113H[K[44;113H291,1[9C43%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;3H<button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone Share, location:repoo[43;1H overview" aria-expanded="false" aria-haspopup="true">[44;113H[K[44;113H292,1[9C43%[42;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5HShare[44;113H[K[44;113H293,1[9C43%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H</button>[44;113H[K[44;113H294,1[9C44%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</div>[44;113H[K[44;113H295,1[9C44%[43;1H[?12l[?25h[?25l[1;43r[1;1H[3M[1;44r[41;1H<input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="https://gist.github.cc[42;1Hom/Jaesang/8e45f3c1760c4158545aa60de04d57fe" aria-label="Clone this repository at https://gist.github.com/Jaesang/8e45f3c1760c41588[43;1H545aa60de04d57fe" readonly>[44;113H[K[44;113H296,1[9C44%[41;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H<div class="input-group-button">[44;113H[K[44;113H297,1[9C44%[43;1H[?12l[?25h[?25l[1;43r[1;1H[8M[1;44r[36;3H<button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copp[37;1Hied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14  [38;1H16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2vv[39;1H1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 11[40;1H .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg></bb[41;1Hutton>
+</div>[44;113H[K[44;113H298,1[9C45%[36;1H[?12l[?25h[?25l[44;115H9[42;1H[?12l[?25h[?25l[44;113H300,0-1[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H</span>[44;113H[K[44;113H301,1[9C45%[43;1H[?12l[?25h[?25l[1;43r[1;1H[6M[1;44r[38;15H</div>[39;13H</div>[40;13H<div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">[41;15H<svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 11[42;1H2 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>[43;15H<div class="select-menu-item-text">[44;113H[K[44;113H302,1[9C46%[38;1H[?12l[?25h[?25l[44;115H3[39;1H[?12l[?25h[?25l[44;115H4[40;1H[?12l[?25h[?25l[44;115H5[41;1H[?12l[?25h[?25l[44;115H6[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H<input type="radio" name="protocol_selector" value="http" >[44;113H[K[44;113H307,1[9C46%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H<span class="select-menu-item-heading">[44;113H[K[44;113H308,1[9C46%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;19HClone via[44;113H[K[44;113H309,1[9C46%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;19HHTTPS[44;113H[K[44;113H310,1[9C46%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H</span>[44;113H[K[44;113H311,1[9C46%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;19H<span class="description">[44;113H[K[44;113H312,1[9C47%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;21HClone with Git or checkout with SVN using the repository's web address.[43;19H</span>[44;113H[K[44;113H313,1[9C47%[42;1H[?12l[?25h[?25l[44;115H4[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H<span class="js-select-button-text hidden-select-button-text">[44;113H[K[44;113H315,1[9C47%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;19H<div class="input-group-button">[44;113H[K[44;113H316,1[9C47%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;3H<button type="button" class="btn btn-sm select-menu-button js-menu-target" data-ga-click="Repository, clone HTTPS, location:repoo[43;1H overview" aria-expanded="false" aria-haspopup="true">[44;113H[K[44;113H317,1[9C47%[42;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5HHTTPS[44;113H[K[44;113H318,1[9C48%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H</button>[44;113H[K[44;113H319,1[9C48%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</div>[44;113H[K[44;113H320,1[9C48%[43;1H[?12l[?25h[?25l[1;43r[1;1H[3M[1;44r[41;1H<input type="text" class="form-control input-monospace input-sm js-zeroclipboard-target js-url-field" value="https://gist.github.cc[42;1Hom/8e45f3c1760c4158545aa60de04d57fe.git" aria-label="Clone this repository at https://gist.github.com/8e45f3c1760c4158545aa60de04dd[43;1H57fe.git" readonly>[44;113H[K[44;113H321,1[9C48%[41;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H<div class="input-group-button">[44;113H[K[44;113H322,1[9C48%[43;1H[?12l[?25h[?25l[1;43r[1;1H[8M[1;44r[36;3H<button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copp[37;1Hied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" version="1.1" viewBox="0 0 14  [38;1H16" width="14"><path fill-rule="evenodd" d="M2 13h4v1H2v-1zm5-6H2v1h5V7zm2 3V8l-3 3 3 3v-2h5v-2H9zM4.5 9H2v1h2.5V9zM2 12h2.5v-1H2vv[39;1H1zm9 1h1v2c-.02.28-.11.52-.3.7-.19.18-.42.28-.7.3H1c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3c0-1.11.89-2 2-2 1.11 0 2 .89 2 2h3c.55 0 11[40;1H .45 1 1v5h-1V6H1v9h10v-2zM2 5h8c0-.55-.45-1-1-1H8c-.55 0-1-.45-1-1s-.45-1-1-1-1 .45-1 1-.45 1-1 1H3c-.55 0-1 .45-1 1z"/></svg></bb[41;1Hutton>
+</div>[44;113H[K[44;113H323,1[9C49%[36;1H[?12l[?25h[?25l[44;115H4[42;1H[?12l[?25h[?25l[44;115H5,0-1[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;17H</span>[44;113H[K[44;113H326,1[9C49%[43;1H[?12l[?25h[?25l[1;43r[1;1H[6M[1;44r[38;15H</div>[39;13H</div>[40;9H</div>[41;9H<div class="select-menu-list" role="menu">[42;11H<a class="select-menu-item select-menu-action" href="https://help.github.com/articles/which-remote-url-should-i-use" tarr[43;1Hget="_blank">[44;113H[K[44;113H327,1[9C50%[38;1H[?12l[?25h[?25l[44;115H8[39;1H[?12l[?25h[?25l[44;115H9[40;1H[?12l[?25h[?25l[44;114H30[41;1H[?12l[?25h[?25l[44;115H1[42;1H[?12l[?25h[?25l[1;43r[1;1H[4M[1;44r[40;13H<svg aria-hidden="true" class="octicon octicon-question select-menu-item-icon" height="16" version="1.1" viewBox="0 0  [41;1H14 16" width="14"><path fill-rule="evenodd" d="M6 10h2v2H6v-2zm4-3.5C10 8.64 8 9 8 9H6c0-.55.45-1 1-1h.5c.28 0 .5-.22.5-.5v-1c0-.22[42;1H8-.22-.5-.5-.5h-1c-.28 0-.5.22-.5.5V7H4c0-1.5 1.5-3 3-3s3 1 3 2.5zM7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 11[43;1H 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7z"/></svg>[44;113H[K[44;113H332,1[9C50%[40;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;13H<div class="select-menu-item-text">[44;113H[K[44;113H333,1[9C50%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;15HLearn more about clone URLs[44;113H[K[44;113H334,1[9C51%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;13H</div>[43;11H</a>[44;113H[K[44;113H335,1[9C51%[42;1H[?12l[?25h[?25l[44;115H6[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;9H</div>[44;113H[K[44;113H337,1[9C51%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H</div>[44;113H[K[44;113H338,1[9C51%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H</div>[44;113H[K[44;113H339,1[9C51%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H</div>[44;113H[K[44;113H340,1[9C52%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</div>[44;113H[K[44;113H341,1[9C52%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H342,0-1[7C52%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H343,0-1[7C52%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5H<div class="file-navigation-option">[44;113H[K[44;113H344,1[9C52%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</div>[44;113H[K[44;113H345,1[9C52%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H346,0-1[7C53%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H347,0-1[7C53%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;5H<div class="file-navigation-option">[43;7H<a href="/Jaesang/8e45f3c1760c4158545aa60de04d57fe/archive/d6aff2f2373dbbbb81734e597e84abebabdb1aeb.zip"[44;113H[K[44;113H348,1[9C53%[42;1H[?12l[?25h[?25l[44;115H9[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;11Hclass="btn btn-sm"[44;113H[K[44;113H350,1[9C53%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;11Hrel="nofollow"[44;113H[K[44;113H351,1[9C53%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;11Hdata-ga-click="Gist, download zip, location:gist overview">[44;113H[K[44;113H352,1[9C53%[43;1H[?12l[?25h[?25l[1;43r[1;1H[3M[1;44r[41;9HDownload ZIP[42;7H</a>
+    </div>[44;113H[K[44;113H353,1[9C54%[41;1H[?12l[?25h[?25l[44;115H4[42;1H[?12l[?25h[?25l[44;115H5[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H</div>[44;113H[K[44;113H356,1[9C54%[43;1H[?12l[?25h[?25l[1;43r[1;1H[6M[1;44r[39;3H<div class="float-left">
+    <nav class="reponav js-repo-nav js-sidenav-container-pjax"[41;6Hrole="navigation"[42;6Hdata-pjax="#gist-pjax-container">[44;113H[K[44;113H357,0-1[7C55%[38;1H[?12l[?25h[?25l[44;115H8,1  [39;1H[?12l[?25h[?25l[44;115H9[40;1H[?12l[?25h[?25l[44;114H60[41;1H[?12l[?25h[?25l[44;115H1[42;1H[?12l[?25h[?25l[44;115H2,0-1[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;3H<a href="/Jaesang/8e45f3c1760c4158545aa60de04d57fe" aria-label="Code" class="js-selected-navigation-item selected reponav-item"  [43;1Hdata-hotkey="g c" data-pjax="true" data-selected-links="gist_code /Jaesang/8e45f3c1760c4158545aa60de04d57fe">[44;113H[K[44;113H363,1[9C55%[42;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;5H<svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule==[43;1H"evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>[44;113H[K[44;113H364,1[9C55%[42;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;5HCode[44;113H[K[44;113H365,1[9C55%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</a>[44;113H[K[44;113H366,1[9C55%[43;1H[?12l[?25h[?25l[1;43r[1;1H[3M[1;44r[41;5H<a href="/Jaesang/8e45f3c1760c4158545aa60de04d57fe/revisions" aria-label="Revisions" class="js-selected-navigation-item reponaa[42;1Hv-item" data-hotkey="g r" data-pjax="true" data-selected-links="gist_revisions /Jaesang/8e45f3c1760c4158545aa60de04d57fe/revisionss[43;1H">[44;113H[K[44;113H367,1[9C56%[41;1H[?12l[?25h[?25l[1;43r[1;1H[4M[1;44r[40;7H<svg aria-hidden="true" class="octicon octicon-git-commit" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fii[41;1Hll-rule="evenodd" d="M10.86 7c-.45-1.72-2-3-3.86-3-1.86 0-3.41 1.28-3.86 3H0v2h3.14c.45 1.72 2 3 3.86 3 1.86 0 3.41-1.28 3.86-3H144[42;1HV7h-3.14zM7 10.2c-1.22 0-2.2-.98-2.2-2.2 0-1.22.98-2.2 2.2-2.2 1.22 0 2.2.98 2.2 2.2 0 1.22-.98 2.2-2.2 2.2z"/></svg>[43;7HRevisions[44;113H[K[44;113H368,1[9C56%[40;1H[?12l[?25h[?25l[44;115H9[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H<span class="Counter">11</span>[44;113H[K[44;113H370,1[9C56%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</a>[44;113H[K[44;113H371,1[9C56%[43;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;5H<a href="/Jaesang/8e45f3c1760c4158545aa60de04d57fe/stargazers" aria-label="Stars" class="js-selected-navigation-item reponav-ii[43;1Htem" data-hotkey="g s" data-pjax="true" data-selected-links="gist_stars /Jaesang/8e45f3c1760c4158545aa60de04d57fe/stargazers">[44;113H[K[44;113H372,1[9C57%[42;1H[?12l[?25h[?25l[1;43r[1;1H[2M[1;44r[42;7H<svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rull[43;1He="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>[44;113H[K[44;113H373,1[9C57%[42;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7HStars[44;113H[K[44;113H374,1[9C57%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H<span class="Counter">1</span>[44;113H[K[44;113H375,1[9C57%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</a>[44;113H[K[44;113H376,1[9C57%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H</nav>[44;113H[K[44;113H377,1[9C57%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[44;113H[K[44;113H378,0-1[7C58%[43;1H[?12l[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H</div>[44;113H[K[44;113H379,1[9C58%[43;1H[?12l[?25h[?25l[44;113H[K[44;1H:[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l[44;1H[K[44;1H[?1l>[?12l[?25h[?1049l]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# [K]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# cat /etc/red[K[K[K[K[K[K[K[K[K[K[K[Kuname -r[Ka
+Linux jaesanglee-5914 4.4.0-83-generic #106-Ubuntu SMP Mon Jun 26 17:54:43 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# [K]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# ls -al
+total 96
+drwx------  6 root root  4096 Jul 14 12:59 [0m[01;34m.[0m
+drwxr-xr-x 23 root root  4096 Jul 13 21:46 [01;34m..[0m
+-rw-------  1 root root  2308 Jul 13 13:54 .bash_history
+-rw-r--r--  1 root root  3106 Oct 23  2015 .bashrc
+drwx------  2 root root  4096 Jan 31 17:06 [01;34m.cache[0m
+-rw-r--r--  1 root root     0 Jul 11 14:30 .cloud-locale-test.skip
+drwxr-xr-x  4 root root  4096 Jul 11 21:54 [01;34m.kube[0m
+-rw-r--r--  1 root root 43849 Jul 14 12:58 ook-hands-on-2017-kr
+-rw-r--r--  1 root root   148 Aug 18  2015 .profile
+-rw-------  1 root root  1024 Jul 12 18:28 .rnd
+drwx------  2 root root  4096 Jul 11 14:29 [01;34m.ssh[0m
+drwxr-xr-x  2 root root  4096 Feb  7 13:52 [01;34m.vim[0m
+-rw-------  1 root root  5030 Jul 14 12:59 .viminfo
+-rw-r--r--  1 root root   172 Jul 14 12:58 .wget-hsts
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# cd .kube/
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# s -[K[K[Kls -al
+total 20
+drwxr-xr-x 4 root root 4096 Jul 11 21:54 [0m[01;34m.[0m
+drwx------ 6 root root 4096 Jul 14 12:59 [01;34m..[0m
+drwxr-xr-x 3 root root 4096 Jul 11 18:43 [01;34mcache[0m
+-rw------- 1 root root  348 Jul 11 21:54 config
+drwxr-xr-x 3 root root 4096 Jul 11 18:43 [01;34mschema[0m
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# 
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# 
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# 
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# cd cache/[K[K[K[K[K[K[K[K[Kcd cahe[Kc[K[Kche/[K[K[K[K[K[K[K[K[K
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# 
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# 
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# 
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# 
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# 
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# 
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# [K]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# .g[K[K.bi[K[Kviminfo[K[K[K[K[K[K[K[K
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# 
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# 
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# 
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# 
+]0;root@jaesanglee-5914: ~/.kuberoot@jaesanglee-5914:~/.kube# cd ..
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# ls -al
+total 96
+drwx------  6 root root  4096 Jul 14 12:59 [0m[01;34m.[0m
+drwxr-xr-x 23 root root  4096 Jul 13 21:46 [01;34m..[0m
+-rw-------  1 root root  2308 Jul 13 13:54 .bash_history
+-rw-r--r--  1 root root  3106 Oct 23  2015 .bashrc
+drwx------  2 root root  4096 Jan 31 17:06 [01;34m.cache[0m
+-rw-r--r--  1 root root     0 Jul 11 14:30 .cloud-locale-test.skip
+drwxr-xr-x  4 root root  4096 Jul 11 21:54 [01;34m.kube[0m
+-rw-r--r--  1 root root 43849 Jul 14 12:58 ook-hands-on-2017-kr
+-rw-r--r--  1 root root   148 Aug 18  2015 .profile
+-rw-------  1 root root  1024 Jul 12 18:28 .rnd
+drwx------  2 root root  4096 Jul 11 14:29 [01;34m.ssh[0m
+drwxr-xr-x  2 root root  4096 Feb  7 13:52 [01;34m.vim[0m
+-rw-------  1 root root  5030 Jul 14 12:59 .viminfo
+-rw-r--r--  1 root root   172 Jul 14 12:58 .wget-hsts
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# sudo[K[K[K[Kid 
+uid=0(root) gid=0(root) groups=0(root)
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+systemd-bus-proxy:x:103:105:systemd Bus Proxy,,,:/run/systemd:/bin/false
+syslog:x:104:108::/home/syslog:/bin/false
+_apt:x:105:65534::/nonexistent:/bin/false
+lxd:x:106:65534::/var/lib/lxd/:/bin/false
+messagebus:x:107:111::/var/run/dbus:/bin/false
+uuidd:x:108:112::/run/uuidd:/bin/false
+dnsmasq:x:109:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+sshd:x:110:65534::/var/run/sshd:/usr/sbin/nologin
+pollinate:x:111:1::/var/cache/pollinate:/bin/false
+ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
+kube:x:999:999:Kubernetes user:/home/kube:/sbin/nologin
+etcd:x:998:997:Etcd user:/var/lib/etcd:/bin/nologin
+stack:x:1001:1001:,,,:/home/stack:/bin/bash
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# exit
+logout
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ sudo aptg-et [K[K[K[K[K-get -u up[K[K[K[Ky ip[K[Kupdate
+sudo: unable to resolve host jaesanglee-5914
+0% [Working]0% [Connecting to rCore.clouds.archive.ubuntu.com (91.189.91.23)] [Waiting for headers] [Waiting for headers]                                                                                                             Get:1 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+                                                                                                             0% [Waiting for headers] [1 InRelease 12.6 kB/102 kB 12%] [Waiting for headers]                                                                               Hit:2 http://ppa.launchpad.net/ansible/ansible/ubuntu xenial InRelease
+                                                                               0% [Waiting for headers] [1 InRelease 12.6 kB/102 kB 12%]0% [2 InRelease gpgv 18.1 kB] [Waiting for headers] [1 InRelease 12.6 kB/102 kB 12%]                                                                                    0% [Waiting for headers] [1 InRelease 12.6 kB/102 kB 12%]                                                         Hit:3 http://rCore.clouds.archive.ubuntu.com/ubuntu xenial InRelease
+                                                         0% [1 InRelease 12.6 kB/102 kB 12%]0% [3 InRelease gpgv 247 kB] [Waiting for headers] [1 InRelease 12.6 kB/102 kB 12%]                                                                                   0% [Waiting for headers] [1 InRelease 12.6 kB/102 kB 12%]                                                         Get:4 http://rCore.clouds.archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
+0% [4 InRelease 12.6 kB/102 kB 12%] [1 InRelease 38.3 kB/102 kB 38%]                                                                    0% [4 InRelease 89.9 kB/102 kB 88%]0% [1 InRelease gpgv 102 kB] [4 InRelease 89.9 kB/102 kB 88%]                                                             0% [4 InRelease 89.9 kB/102 kB 88%]                                   0% [Waiting for headers]0% [4 InRelease gpgv 102 kB] [Waiting for headers]                                                  0% [Waiting for headers]                        Get:5 http://rCore.clouds.archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
+0% [5 InRelease 8,192 B/102 kB 8%]                                  0% [Working]0% [5 InRelease gpgv 102 kB] [Waiting for headers]                                                  0% [Waiting for headers]                        Hit:6 https://apt.dockerproject.org/repo ubuntu-xenial InRelease
+0% [Waiting for headers]0% [6 InRelease gpgv 48.7 kB] [Waiting for headers]                                                   Get:7 http://rCore.clouds.archive.ubuntu.com/ubuntu xenial-updates/main Sources [259 kB]
+0% [6 InRelease gpgv 48.7 kB] [7 Sources 56.8 kB/259 kB 22%]                                                            43% [7 Sources 180 kB/259 kB 70%]                                 46% [Waiting for headers]46% [7 Sources store 0 B] [Waiting for headers]                                               47% [Waiting for headers]                         Get:8 http://rCore.clouds.archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [575 kB]
+47% [8 Packages 0 B/575 kB 0%]                              74% [Waiting for headers]74% [8 Packages store 0 B] [Waiting for headers]                                                75% [Waiting for headers]                         Get:9 http://rCore.clouds.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [504 kB]
+75% [9 Packages 4,096 B/504 kB 1%]                                  99% [Waiting for headers]99% [9 Packages store 0 B] [Waiting for headers]                                                99% [Waiting for headers]                         Get:10 http://rCore.clouds.archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [14.9 kB]
+100% [10 Packages 14.9 kB/14.9 kB 100%]                                       100% [Working]100% [10 Packages store 0 B]                            100% [Working]              Fetched 1,659 kB in 3s (548 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 7%Reading package lists... 7%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 55%Reading package lists... 55%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 84%Reading package lists... 85%Reading package lists... 85%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 92%Reading package lists... 92%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 95%Reading package lists... 95%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ spt-get installl -[K[K[K -y python2.7 python-pip
+No command 'spt-get' found, did you mean:
+ Command 'apt-get' from package 'apt' (main)
+spt-get: command not found
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ spt-get install -y python2.7 python-pip[C[1P[1@a
+E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ apt-get install -y python2.7 python-pip[C[C[C[C[C[C
+E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ sudo i[K-i
+sudo: unable to resolve host jaesanglee-5914
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# aptg-et i[K[K[K[K[K[K-get install -y pyhe[K[Kthon2.7 python-pip
+Reading package lists... 0%Reading package lists... 100%Reading package lists... DoneBuilding dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       Reading state information... 0%Reading state information... 0%Reading state information... Donepython2.7 is already the newest version (2.7.12-1ubuntu0~16.04.1).
+python2.7 set to manually installed.
+python-pip is already the newest version (8.1.1-2ubuntu0.4).
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.4.0-59 linux-headers-4.4.0-59-generic linux-image-4.4.0-59-generic python-selinux
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 90 not upgraded.
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# pip install -Y[KU pip
+Requirement already up-to-date: pip in /usr/local/lib/python2.7/dist-packages
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# pip instll -U junja2[K[K[K[K[Kinja2
+ERROR: unknown command "instll" - maybe you meant "install"
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# pip instll -U jinja2[1@a
+Requirement already up-to-date: jinja2 in /usr/local/lib/python2.7/dist-packages
+Requirement already up-to-date: MarkupSafe>=0.23 in /usr/local/lib/python2.7/dist-packages (from jinja2)
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# apt-get [K[K[K[K[K-add-repository ppa;ansible[K[K[K[K[K[K[K[K:ansible/ansible
+ Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy. Avoid writing scripts or custom code to deploy and update your applications— automate in a language that approaches plain English, using SSH, with no agents to install on remote systems.
+
+http://ansible.com/
+ More info: https://launchpad.net/~ansible/+archive/ubuntu/ansible
+Press [ENTER] to continue or ctrl-c to cancel adding it
+
+gpg: keyring `/tmp/tmp7415bqje/secring.gpg' created
+gpg: keyring `/tmp/tmp7415bqje/pubring.gpg' created
+gpg: requesting key 7BB9C367 from hkp server keyserver.ubuntu.com
+gpg: /tmp/tmp7415bqje/trustdb.gpg: trustdb created
+gpg: key 7BB9C367: public key "Launchpad PPA for Ansible, Inc." imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+OK
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# apt-get update
+0% [Working]0% [Waiting for headers] [Waiting for headers] [Waiting for headers]                                                                    Hit:1 http://rCore.clouds.archive.ubuntu.com/ubuntu xenial InRelease
+                                                                    0% [Waiting for headers] [Waiting for headers]                                              Hit:2 http://security.ubuntu.com/ubuntu xenial-security InRelease
+0% [Waiting for headers] [Waiting for headers]0% [1 InRelease gpgv 247 kB] [Waiting for headers] [Waiting for headers]                                                                        Hit:3 http://ppa.launchpad.net/ansible/ansible/ubuntu xenial InRelease
+                                                                        0% [1 InRelease gpgv 247 kB] [Waiting for headers]                                                  0% [Waiting for headers]0% [2 InRelease gpgv 102 kB] [Waiting for headers]                                                  0% [Waiting for headers]0% [3 InRelease gpgv 18.1 kB] [Waiting for headers]                                                   0% [Waiting for headers]                        Get:4 http://rCore.clouds.archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
+0% [4 InRelease 12.6 kB/102 kB 12%]0% [4 InRelease 38.3 kB/102 kB 38%]                                   0% [Working]0% [4 InRelease gpgv 102 kB] [Waiting for headers]                                                  0% [Waiting for headers]                        Hit:5 https://apt.dockerproject.org/repo ubuntu-xenial InRelease
+0% [Waiting for headers]0% [5 InRelease gpgv 48.7 kB] [Waiting for headers]                                                   Get:6 http://rCore.clouds.archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
+0% [5 InRelease gpgv 48.7 kB] [6 InRelease 43.5 kB/102 kB 43%]                                                              0% [5 InRelease gpgv 48.7 kB]                             0% [Working]0% [6 InRelease gpgv 102 kB]                            100% [Working]              Fetched 204 kB in 2s (101 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 7%Reading package lists... 7%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 55%Reading package lists... 55%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 83%Reading package lists... 85%Reading package lists... 85%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 92%Reading package lists... 92%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 95%Reading package lists... 95%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# apt-get install -y answ[Kible python-netaddr
+Reading package lists... 0%Reading package lists... 100%Reading package lists... DoneBuilding dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       Reading state information... 0%Reading state information... 0%Reading state information... Donepython-netaddr is already the newest version (0.7.18-1).
+ansible is already the newest version (2.3.1.0-1ppa~xenial).
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.4.0-59 linux-headers-4.4.0-59-generic linux-image-4.4.0-59-generic python-selinux
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 90 not upgraded.
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# ssh localhost
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is SHA256:q3W/Ez4DGWYKtySptOzk0WzmbG7A0Qe+3goTVNV0EYE.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.root@localhost's password: 
+Permission denied, please try again.root@localhost's password: 
+
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# sudo -apt-get[K[K[K[K[K[K[K[Kap-[Ktg[K-get install -y ansible python-netadd[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kssh localhost
+root@localhost's password: 
+
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# 
+]0;root@jaesanglee-5914: ~root@jaesanglee-5914:~# exit
+logout
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ ssh localhost
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!Someone could be eavesdropping on you right now (man-in-the-middle attack)!It is also possible that a host key has just been changed.The fingerprint for the ECDSA key sent by the remote host is
+SHA256:q3W/Ez4DGWYKtySptOzk0WzmbG7A0Qe+3goTVNV0EYE.Please contact your system administrator.Add correct host key in /home/stack/.ssh/known_hosts to get rid of this message.Offending ECDSA key in /home/stack/.ssh/known_hosts:2  remove with:  ssh-keygen -f "/home/stack/.ssh/known_hosts" -R localhostECDSA host key for localhost has changed and you have requested strict checking.Host key verification failed.]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ ls -al
+total 48
+drwxr-xr-x 5 stack stack 4096 Jul 13 15:06 [0m[01;34m.[0m
+drwxr-xr-x 5 root  root  4096 Jul 13 13:24 [01;34m..[0m
+-rw------- 1 stack stack  425 Jul 13 15:24 .bash_history
+-rw-r--r-- 1 stack stack  220 Jul 13 13:24 .bash_logout
+-rw-r--r-- 1 stack stack 3771 Jul 13 13:24 .bashrc
+drwx------ 2 stack stack 4096 Jul 13 13:25 [01;34m.cache[0m
+-rw-rw-r-- 1 stack stack    0 Jul 13 13:25 .cloud-locale-test.skip
+-rw-r--r-- 1 root  root   218 Jul 13 13:27 general-storage-class.yaml
+drwxr-xr-x 6 stack stack 4096 Jul 13 15:06 [01;34m.helm[0m
+-rw-r--r-- 1 root  root  3019 Jul 13 13:27 kube-controller-manager.manifest.j2
+-rw-r--r-- 1 stack stack  655 Jul 13 13:24 .profile
+drwx------ 2 stack stack 4096 Jul 13 14:01 [01;34m.ssh[0m
+-rw-r--r-- 1 stack stack    0 Jul 13 13:27 .sudo_as_admin_successful
+-rw------- 1 stack stack 2088 Jul 13 15:05 .viminfo
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ cd ..sh[K[K[K.ss[K[K[Kssh
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ ls -al
+total 24
+drwx------ 2 stack stack 4096 Jul 13 14:01 [0m[01;34m.[0m
+drwxr-xr-x 5 stack stack 4096 Jul 13 15:06 [01;34m..[0m
+-rw------- 1 stack stack  399 Jul 13 14:01 authorized_keys
+-rw------- 1 stack stack 1675 Jul 13 14:01 id_rsa
+-rw-r--r-- 1 stack stack  399 Jul 13 14:01 id_rsa.pub
+-rw-r--r-- 1 stack stack  444 Jul 13 14:01 known_hosts
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ rm known_hosts [K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kvi known_hosts 
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;43r[?12;25h[?12l[?25h[27m[23m[m[H[2J[?25l[43;1H"known_hosts" 2L, 444C[>c[1;1H|1|4et6cIKt5ePCP/8RskXoR+j6b70=|qtfUG8R/oAbEOKVa9K1OxlqkTJQ= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAEx1iUFeYWtt[2;1HNjRNvO1eezuvjTWaeL7aCY7VYIzr4FHP+3ZnRCQ2iw+cjap00R8HBRlTjp8zlAkUCvNr5qm8Rx8=
+|1|iDyLRgqvVbZUizlydInDM/WplJM=|v+bDv1X4GxFB/d5g83g8eb48fTQ= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAlphC74Ka611[4;1HX8ruKILUnV3VavFMPU0q2yPqibDWzqgOW3BhQnvSlQzADEpOfVYKL56g2ZAz7+cloUlwk3qBbdk=
+[1m[34m~                                                                                                                                                [6;1H~                                                                                                                                                [7;1H~                                                                                                                                                [8;1H~                                                                                                                                                [9;1H~                                                                                                                                                [10;1H~                                                                                                                                                [11;1H~                                                                                                                                                [12;1H~                                                                                                                                                [13;1H~                                                                                                                                                [14;1H~                                                                                                                                                [15;1H~                                                                                                                                                [16;1H~                                                                                                                                                [17;1H~                                                                                                                                                [18;1H~                                                                                                                                                [19;1H~                                                                                                                                                [20;1H~                                                                                                                                                [21;1H~                                                                                                                                                [22;1H~                                                                                                                                                [23;1H~                                                                                                                                                [24;1H~                                                                                                                                                [25;1H~                                                                                                                                                [26;1H~                                                                                                                                                [27;1H~                                                                                                                                                [28;1H~                                                                                                                                                [29;1H~                                                                                                                                                [30;1H~                                                                                                                                                [31;1H~                                                                                                                                                [32;1H~                                                                                                                                                [33;1H~                                                                                                                                                [34;1H~                                                                                                                                                [35;1H~                                                                                                                                                [36;1H~                                                                                                                                                [37;1H~                                                                                                                                                [38;1H~                                                                                                                                                [39;1H~                                                                                                                                                [40;1H~                                                                                                                                                [41;1H~                                                                                                                                                [42;1H~                                                                                                                                                [m[43;128H1,1[11CAll[1;1H[?12l[?25h[?25l[43;128H2[3;1H[?12l[?25h[?25l[43;128H1[1;1H[?12l[?25h[?25l[43;1H[K[43;1H:[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l[43;1H[K[43;1H[?1l>[?12l[?25h[?1049l]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ rm known_hosts 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ cd ..
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ ls
+general-storage-class.yaml  kube-controller-manager.manifest.j2
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ ssh localhost
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is SHA256:q3W/Ez4DGWYKtySptOzk0WzmbG7A0Qe+3goTVNV0EYE.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.0-83-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+90 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Fri Jul 14 12:57:13 2017 from 211.210.76.6]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ ssh-keyge[K[Ke[Kgen -f "/home/stack/.ssh/known_hosts" -R localhost
+# Host localhost found: line 1
+/home/stack/.ssh/known_hosts updated.
+Original contents retained as /home/stack/.ssh/known_hosts.old
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ ssh-keygen -f "/home/stack/.ssh/known_hosts" -R localhost[C[C
+Host localhost not found in /home/stack/.ssh/known_hosts]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ ssh localhost
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is SHA256:q3W/Ez4DGWYKtySptOzk0WzmbG7A0Qe+3goTVNV0EYE.
+Are you sure you want to continue connecting (yes/no)? es  yes
+Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.0-83-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+90 packages can be updated.
+0 updates are security updates.
+
+
+Last login: Fri Jul 14 13:20:58 2017 from 127.0.0.1]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ 
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ ls -al
+total 48
+drwxr-xr-x 5 stack stack 4096 Jul 14 13:20 [0m[01;34m.[0m
+drwxr-xr-x 5 root  root  4096 Jul 13 13:24 [01;34m..[0m
+-rw------- 1 stack stack  425 Jul 13 15:24 .bash_history
+-rw-r--r-- 1 stack stack  220 Jul 13 13:24 .bash_logout
+-rw-r--r-- 1 stack stack 3771 Jul 13 13:24 .bashrc
+drwx------ 2 stack stack 4096 Jul 13 13:25 [01;34m.cache[0m
+-rw-rw-r-- 1 stack stack    0 Jul 13 13:25 .cloud-locale-test.skip
+-rw-r--r-- 1 root  root   218 Jul 13 13:27 general-storage-class.yaml
+drwxr-xr-x 6 stack stack 4096 Jul 13 15:06 [01;34m.helm[0m
+-rw-r--r-- 1 root  root  3019 Jul 13 13:27 kube-controller-manager.manifest.j2
+-rw-r--r-- 1 stack stack  655 Jul 13 13:24 .profile
+drwx------ 2 stack stack 4096 Jul 14 13:22 [01;34m.ssh[0m
+-rw-r--r-- 1 stack stack    0 Jul 13 13:27 .sudo_as_admin_successful
+-rw------- 1 stack stack 3420 Jul 14 13:20 .viminfo
+]0;stack@jaesanglee-5914: ~stack@jaesanglee-5914:~$ cd .ssh
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ ls
+authorized_keys  id_rsa  id_rsa.pub  known_hosts  known_hosts.old
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ ls- a[K[K[K -al
+total 28
+drwx------ 2 stack stack 4096 Jul 14 13:22 [0m[01;34m.[0m
+drwxr-xr-x 5 stack stack 4096 Jul 14 13:20 [01;34m..[0m
+-rw------- 1 stack stack  399 Jul 13 14:01 authorized_keys
+-rw------- 1 stack stack 1675 Jul 13 14:01 id_rsa
+-rw-r--r-- 1 stack stack  399 Jul 13 14:01 id_rsa.pub
+-rw------- 1 stack stack  222 Jul 14 13:22 known_hosts
+-rw-r--r-- 1 stack stack  222 Jul 14 13:20 known_hosts.old
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ wget http:s[K//tiny/[K.cc/ook-hands-on-2017-kr
+--2017-07-14 13:24:01--  http://tiny.cc/ook-hands-on-2017-kr
+Resolving tiny.cc (tiny.cc)... 192.241.240.89
+Connecting to tiny.cc (tiny.cc)|192.241.240.89|:80... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://gist.github.com/Jaesang/8e45f3c1760c4158545aa60de04d57fe [following]
+--2017-07-14 13:24:01--  https://gist.github.com/Jaesang/8e45f3c1760c4158545aa60de04d57fe
+Resolving gist.github.com (gist.github.com)... 192.30.253.118, 192.30.253.119
+Connecting to gist.github.com (gist.github.com)|192.30.253.118|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘ook-hands-on-2017-kr’
+
+ook-hands-on-2017-kr                     [<=>                                                                 ]       0  --.-KB/s               ook-hands-on-2017-kr                     [ <=>                                                                ]   5.95K  28.3KB/s               ook-hands-on-2017-kr                     [  <=>                                                               ]  31.36K  75.4KB/s               ook-hands-on-2017-kr                     [   <=>                                                              ]  42.82K   103KB/s    in 0.4s    
+
+2017-07-14 13:24:03 (103 KB/s) - ‘ook-hands-on-2017-kr’ saved [43849]
+
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ ls -al
+total 72
+drwx------ 2 stack stack  4096 Jul 14 13:24 [0m[01;34m.[0m
+drwxr-xr-x 5 stack stack  4096 Jul 14 13:24 [01;34m..[0m
+-rw------- 1 stack stack   399 Jul 13 14:01 authorized_keys
+-rw------- 1 stack stack  1675 Jul 13 14:01 id_rsa
+-rw-r--r-- 1 stack stack   399 Jul 13 14:01 id_rsa.pub
+-rw------- 1 stack stack   222 Jul 14 13:22 known_hosts
+-rw-r--r-- 1 stack stack   222 Jul 14 13:20 known_hosts.old
+-rw-rw-r-- 1 stack stack 43849 Jul 14 13:24 ook-hands-on-2017-kr
+]0;stack@jaesanglee-5914: ~/.sshstack@jaesanglee-5914:~/.ssh$ 

@@ -1,0 +1,187 @@
+1. Tomcat 설치
+  - wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.23/bin/apache-tomcat-8.5.23.tar.gz
+  - tar -xvf  apache-tomcat-8.5.23.tar.gz
+  - mv apache-tomcat-8.5.23 tomcat
+  
+
+2. Tomcat 8080 포트 방화벽 허용정책 추가
+
+  firewall-cmd --list-all
+  firewall-cmd --permanent --add-port=8080/tcp
+  firewall-cmd --reload
+
+
+
+3. JVM OPTION
+
+CATALINA_HOME=/root/tomcat
+CATALINA_BASE=/root/tomcat
+SERVER_NAME=song
+GCDIR=$CATALINA_HOME/gclogs
+GCLOG=$GCDIR/$SERVER_NAME-gc.log
+
+JAVA_OPTS="-D$SERVER_NAME"
+JAVA_OPTS="$JAVA_OPTS -Xms128m -Xmx128m -verbose:gc -Xloggc:$GCLOG -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintHeapAtGC"
+JAVA_OPTS="$JAVA_OPTS -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=$CATALINA_HOME/gclogs/$SERVER_NAME-java_pid.hprof"
+
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CATALINA_HOME/lib
+
+export CATALINA_HOME CATALINA_BASE SERVER_NAME GCDIR GCLOG JAVA_OPTS LD_LIBRARY_PATH
+
+4. Tomcat native 설치
+
+    mkdir tomcat-native
+    cd tomcat-native
+    wget http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/native/1.2.16/source/tomcat-native-1.2.16-src.tar.gz    
+    tar -xvf tomcat-native-1.2.16-src.tar.gz
+    cd /root/tomcat-native/tomcat-native-1.2.16-src/native
+    
+    
+    ./configure --prefix=/root/tomcat --with-apr=/usr/bin --with-java-home=/usr/java/jdk1.8.0_144
+    make
+    make install
+
+vi catalina.out <- Tomcat Native library 설치되었다는 로그가 나옴
+org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.4.8].
+
+
+5. 트러블슈팅 3가지
+   ㅇ 쓰레드 덤프 -> tail -f catalia.out 후 kill -3 2382하여 로그확인
+   ㅇ gc 로그 -> jstat , gclog 확인 
+   ㅇ heap 덤프 -> jmap -dump:live,format=b,file=heap.bin 2697후 메모리analyze 파일import 
+
+Dumping heap to /root/tomcat/logs/heap.bin ...
+Heap dump file created
+
+
+-------------------------------------------------------------------------------------
+1. apache 설치
+
+  - 현재 S/W가 설치되 있는지 확인하는 방법
+    rpm -qi perl
+    파일경로 확인
+    rpm -ql perl
+    
+  - apr, apr-util 설치
+    yum install apr
+    yum install apr-devel
+    yum install apr-util
+    yum install apr-util-devel
+    yum install pcre-devel
+    
+  - openssl 설치되 있는 것 제거
+    openssl version
+    yum remove openssl
+
+    mkdir openssl
+    cd openssl
+    wget https://www.openssl.org/source/openssl-1.1.0g.tar.gz
+    tar -xvf openssl-1.1.0g.tar.gz
+    
+    ./config 
+    make
+    make install
+    기본설치 디렉토리 /usr/local/ssl
+    만약 Perl 5가 필요하다고 나오면 Perl 설치 : yum -y install perl
+    
+    .bash_profile  에 아래 추가
+    LD_LIBRARY_PATH=/usr/local/lib64
+    export LD_LIBRARY_PATH
+    source ~/.bash_profile
+    openssl version  으로 설치 버전 확인
+
+
+  - apache 설치
+    mkdir apache-2.4.29
+    mkdir httpd
+    cd httpd
+    wget http://apache.mirror.cdnetworks.com//httpd/httpd-2.4.29.tar.gz
+    tar -xvf httpd-2.4.29.tar.gz   
+   
+    
+    ./configure --prefix=/root/apache-2.4.29 \
+    --enable-module=so \
+    --enable-rewrite \
+    --enable-so \
+    --enable-modules=ssl \
+    --enable-ssl \
+    --with-apr=/usr/bin \
+    --with-apr-util=/usr/bin \
+    --with-ssl=/usr/local/ssl \
+    --enable-mods-shared=all    
+
+ make
+ make install
+ cd /root/apache-2.4.29/bin
+ ./apachectl start
+  ps -ef | grep httpd
+-------------------------------------------------------------------------------------------------
+1. apache & tomcat 설정 및 연동
+
+  - IP 설정 및 방화벽/NAT 오픈
+    ServerName 10.0.2.15:80   ( httpd.conf)
+    
+    firewall-cmd --permanent --add-port=80/tcp
+    firewall-cmd --reload
+    
+    VM NAT 80 포트 설정
+    
+  
+  - mod_jk 설치
+    mkdir modjk
+    cd modjk
+    wget http://mirror.navercorp.com/apache/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.42-src.tar.gz
+    tar -xvf tomcat-connectors-1.2.42-src.tar.gz
+    
+    cd /root/modjk/tomcat-connectors-1.2.42-src/native
+    
+    yum -y install autoconf libtool
+    ./buildconf.sh
+    
+    ./configure --with-apxs=/root/apache-2.4.29/bin/apxs
+    make
+    make install
+
+    /root/apache-2.4.29/modules/mod_jk.so  파일이 생김
+
+    
+  - httpd.conf 파일에 추가
+    LoadModule    jk_module  modules/mod_jk.so
+    JkWorkersFile conf/workers.properties
+    JkShmFile     logs/mod_jk.shm
+    JkLogFile      logs/mod_jk.log
+    JkLogLevel    info
+    JkLogStampFormat "[%a %b %d %H:%M:%S %Y] “
+    JkMount /* router     
+    
+        
+  - conf/workers.properties 파일 생성 
+    # The advanced router LB worker
+    worker.list=router
+    
+    # Define a worker using ajp13
+    worker.worker1.port=8009
+    worker.worker1.host=localhost
+    worker.worker1.type=ajp13
+    worker.worker1.lbfactor=1
+    
+    
+    # Define the LB worker
+    worker.router.type=lb
+    worker.router.balance_workers=worker1
+    
+    
+  - tomcat server.xml에 jvmRoute 추가
+    <Engine name="Catalina" defaultHost="localhost" jvmRoute="worker1">
+ 
+ 브라우저 localhost:80시 tomcat화면으로 연결   
+ ------------------------------------------------------------------------
+<안해도 상관없음>   
+  - httpd.conf DocumentRoot 수정   
+    #DocumentRoot "/root/apache-2.4.29/htdocs"
+    DocumentRoot "/root/tomcat/webapps/ROOT"
+    <Directory "/root/tomcat/webapps/ROOT">
+    #<Directory "/root/apache-2.4.29/htdocs">
+
+  - Read 권한 설정
+    chmod -R 755 webapps

@@ -1,0 +1,10 @@
+ sudo mn --switch=ovsk,protocols=OpenFlow13 --controller=remote,ip=192.168.99.100,port=32779
+
+
+onos> apps -a -s
+*   3 org.onosproject.drivers              1.7.0.SNAPSHOT Default Device    -> default
+*  26 org.onosproject.hostprovider         1.7.0.SNAPSHOT Host Location P
+*  37 org.onosproject.openflow-base        1.7.0.SNAPSHOT OpenFlow Provid
+*  38 org.onosproject.lldpprovider         1.7.0.SNAPSHOT LLDP Link Provi
+*  39 org.onosproject.openflow             1.7.0.SNAPSHOT OpenFlow Meta A   -> openflow ·Î ovs ¿¬°á app
+*  78 org.onosproject.fwd                  1.7.0.SNAPSHOT Reactive Forwar   -> l2 forwarding app 
